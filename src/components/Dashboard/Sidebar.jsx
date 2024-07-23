@@ -3,6 +3,9 @@ import React from "react";
 
 import { Link, NavLink } from "react-router-dom";
 
+import ThemeSwitcher from '../../features/theme/themeSwitcher';
+
+
 const sidebarItems = [
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/e69662981acab63aa64aa1912c25c27ffdf7548842bbbc32f3e8840991b488b0?apiKey=8a82faa9db93454483a68c973b38c7b0&",
@@ -91,6 +94,7 @@ function Sidebar() {
                 className="w-4 aspect-square"
               />
             </button>
+            <ThemeSwitcher /> 
           </div>
           
           <hr className="shrink-0 mt-6 h-px bg-gray-300 border border-gray-300 border-solid" />
