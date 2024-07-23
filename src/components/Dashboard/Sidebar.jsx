@@ -53,7 +53,7 @@ const SidebarItem = ({ icon, text, to }) => {
       <NavLink
         to={to}
         className={({ isActive }) =>
-          `flex gap-2 px-4 py-2 mt-2.5 text-sm font-medium leading-6 text-black whitespace-nowrap rounded-md ${
+          `flex gap-2 px-4 py-2 mt-2.5 text-sm font-medium leading-6 text-black whitespace-nowrap rounded-md dark:bg-black dark:text-white ${
             isActive ? 'text-blue-600' : ''
           }`
         }
@@ -62,9 +62,9 @@ const SidebarItem = ({ icon, text, to }) => {
           loading="lazy"
           src={icon}
           alt=""
-          className="shrink-0 my-auto w-4 aspect-square"
+          className="shrink-0 my-auto w-4 aspect-square dark:text-white"
         />
-        <div className="text">{text}</div>
+        <div className="text dark:bg-black dark:text-white">{text}</div>
       </NavLink>
     );
   }
@@ -73,11 +73,11 @@ const SidebarItem = ({ icon, text, to }) => {
 
 function Sidebar() {
   return (
-    <aside className="flex flex-col w-[21%] max-md:ml-0 max-md:w-full">
+    <aside className="flex flex-col w-[21%] max-md:ml-0 max-md:w-full ">
       <div className="flex flex-col grow justify-center max-md:mt-8">
-        <nav className="flex flex-col px-2.5 pt-6 pb-3.5 w-full bg-white border-r border-gray-300 border-solid">
+        <nav className="flex flex-col px-2.5 pt-6 pb-3.5 w-full bg-white border-r border-gray-300 border-solid dark:bg-black  ">
           <div className="flex gap-5 justify-between ml-2.5 w-full">
-            <div className="flex gap-1.5 justify-center self-start text-lg font-semibold leading-7 text-black whitespace-nowrap">
+            <div className="flex gap-1.5 justify-center self-start text-lg font-semibold leading-7 text-black whitespace-nowrap dark:bg-black dark:text-white">
               <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/f81070173ad6bb2f144fbe6557b07afa4c0787e9cd624e7adfe162f9d149a7dc?apiKey=8a82faa9db93454483a68c973b38c7b0&"
@@ -86,7 +86,7 @@ function Sidebar() {
               />
               <div className="my-auto">Nirmaan</div>
             </div>
-            <button className="flex justify-center items-center px-2 w-8 h-8 bg-white rounded-md border border-gray-300 border-solid">
+            <button className="flex justify-center items-center px-2 w-8 h-8 bg-white rounded-md border border-gray-300 border-solid dark:bg-black dark:text-white">
               <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/1304022697a06d0ac891b41976d22f7bce1a64332f3271602c6d5661ec48fb09?apiKey=8a82faa9db93454483a68c973b38c7b0&"
@@ -97,7 +97,7 @@ function Sidebar() {
             <ThemeSwitcher /> 
           </div>
           
-          <hr className="shrink-0 mt-6 h-px bg-gray-300 border border-gray-300 border-solid" />
+          <hr className="shrink-0 mt-6 h-px bg-gray-300 border border-gray-300 border-solid dark:bg-black dark:text-white" />
           {sidebarItems.map((item, index) => (
             <SidebarItem
               key={index}

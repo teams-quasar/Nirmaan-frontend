@@ -94,7 +94,7 @@ function TransactionHistory() {
           </div>
         </div>
       </div>
-      <hr className="shrink-0 mt-2.5 h-px bg-gray-300 border border-gray-300 border-solid max-md:max-w-full" />
+      <hr className="shrink-0 mt-2.5 h-px bg-gray-300 border border-gray-300 border-solid max-md:max-w-full dark:bg-black dark:text-white" />
       {transactions.map((transaction, index) => (
         <React.Fragment key={index}>
           <TransactionItem {...transaction} />
