@@ -7,10 +7,12 @@ import { Outlet } from 'react-router-dom';
 function Layout() {
   return (
     <>
-     <div className="pr-8 bg-white max-md:pr-5 dark:bg-black dark:text-white">
-      <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+     <div className="pr-8 bg-white  dark:bg-black dark:text-white">
+      <div className="grid grid-cols-5 gap-4">
        <Sidebar />
+       <div className='col-span-4  p-4'>
        <Outlet />
+       </div>
       </div>
     </div>  
     </>

@@ -23,9 +23,10 @@ export const router = createBrowserRouter(
           <Route index element={<MainContent />} />
           <Route path="blogs" element={<BlogList />} />
           <Route path="wallet" element={<Wallet />} />
+          <Route path="discover" element={<BlogList />} />
           <Route path="test" element={<MainContent />} />
         </Route>
-        <Route path="discover" element={<BlogList />} />
+        {/* <Route path="discover" element={<BlogList />} /> */}
       </Route>
       <Route path="login" element={<LoginPage />} />
     </>

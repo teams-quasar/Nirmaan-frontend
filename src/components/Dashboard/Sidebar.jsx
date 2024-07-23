@@ -73,13 +73,12 @@ const SidebarItem = ({ icon, text, to }) => {
 
 function Sidebar() {
   return (
-    <aside className="flex flex-col w-[21%] max-md:ml-0 max-md:w-full ">
-      <div className="flex flex-col grow justify-center max-md:mt-8">
-        <nav className="flex flex-col px-2.5 pt-6 pb-3.5 w-full bg-white border-r border-gray-300 border-solid dark:bg-black  ">
-          <div className="flex gap-5 justify-between ml-2.5 w-full">
+    <aside className="col-span-1  p-4">
+      <div className="flex flex-col justify-center max-md:mt-8">
+        <nav className="flex flex-col px-2.5 pt-6 pb-3.5 bg-white border-r border-gray-300 border-solid dark:bg-black  ">
+          <div className="flex gap-5 justify-between ml-2.5 ">
             <div className="flex gap-1.5 justify-center self-start text-lg font-semibold leading-7 text-black whitespace-nowrap dark:bg-black dark:text-white">
-              <img
-                loading="lazy"
+              <img          loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/f81070173ad6bb2f144fbe6557b07afa4c0787e9cd624e7adfe162f9d149a7dc?apiKey=8a82faa9db93454483a68c973b38c7b0&"
                 alt=""
                 className="shrink-0 aspect-square w-[30px]"
@@ -132,6 +131,8 @@ function Sidebar() {
     </aside>
   );
 }
+
+
 
 export default Sidebar;
 
