@@ -19,8 +19,9 @@ import HomePage from "./components/Homepage/HomePage.jsx";
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route element={<PrivateRoutes />}>
       <Route index element={<HomePage />} />
+      <Route element={<PrivateRoutes />}>
+      
         <Route path="/" element={<Layout />}>
          
           <Route path="blogs" element={<BlogList />} />
@@ -31,6 +32,8 @@ export const router = createBrowserRouter(
         {/* <Route path="discover" element={<BlogList />} /> */}
       </Route>
       <Route path="login" element={<LoginPage />} />
+      <Route path="signup" element={<SignUpPage />} />
+      
     </>
   )
 );

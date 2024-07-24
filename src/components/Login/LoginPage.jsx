@@ -1,7 +1,7 @@
 
 import React from "react";
 import Header from "./Header";
-import LoginForm from "./LoginForm";
+import Login from "./LoginForm";
 
 function LoginPage() {
   return (
@@ -13,7 +13,7 @@ function LoginPage() {
         <main className="flex flex-col ml-5 w-[31%] max-md:ml-0 max-md:w-full">
           <div className="flex flex-col mt-8 max-md:mt-10 max-md:max-w-full">
             <Header />
-            <LoginForm />
+            <Login />
           </div>
         </main>
       </div>
