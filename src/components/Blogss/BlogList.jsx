@@ -37,7 +37,9 @@ const blogData = [
     likes: 459,
     views: 9878,
     comments: 32,
-  },
+  }
+  ,
+  
 
   {
     tags: ["Freshers", "UPSC"],
@@ -50,6 +52,20 @@ const blogData = [
     views: 9878,
     comments: 32,
   }
+  ,
+
+  {
+    tags: ["Freshers", "UPSC"],
+    date: "12 Feb 2024",
+    title:
+      "Lorem ipsum dolor sit amet consectetur. Volutpat imperdiet id arcu in.",
+    content:
+      "Lorem ipsum dolor sit amet consectetur. Nisi nam viverra dolor faucibus tempor mollis eget sit. Gravida senectus sed faucibus eu sed pharetra feugiat. Venenatis mi diam egestas faucibus sit nam.",
+    likes: 459,
+    views: 9878,
+    comments: 32,
+  }
+  
   // Repeat the above object 3 more times for the other blog cards
 ];
 

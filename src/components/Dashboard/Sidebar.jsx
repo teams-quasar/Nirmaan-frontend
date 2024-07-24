@@ -53,8 +53,8 @@ const SidebarItem = ({ icon, text, to }) => {
       <NavLink
         to={to}
         className={({ isActive }) =>
-          `flex gap-2 px-4 py-2 mt-2.5 text-sm font-medium leading-6 text-black whitespace-nowrap rounded-md dark:bg-black dark:text-white ${
-            isActive ? 'text-blue-600' : ''
+          `flex gap-2 px-4 py-2 mt-2.5 text-sm font-medium leading-6 text-black whitespace-nowrap rounded-md dark:text-white   ${
+            isActive ? 'text-blue-600 bg-gray-300 dark:bg-gray-300 dark:text-blue-600'  : ''
           }`
         }
       >
@@ -64,7 +64,7 @@ const SidebarItem = ({ icon, text, to }) => {
           alt=""
           className="shrink-0 my-auto w-4 aspect-square dark:text-white"
         />
-        <div className="text dark:bg-black dark:text-white">{text}</div>
+        <div className="text ">{text}</div>
       </NavLink>
     );
   }
@@ -115,7 +115,7 @@ function Sidebar() {
                 alt=""
                 className="shrink-0 aspect-square fill-gray-400 w-[30px]"
               />
-              <div className="flex-auto my-auto">Prajjawal Pandit</div>
+              <div className="flex-auto my-auto dark:text-white">Prajjawal Pandit</div>
             </div>
             <button className="flex justify-center items-center px-2 w-8 h-8 bg-white rounded-md border border-gray-300 border-solid">
               <img
