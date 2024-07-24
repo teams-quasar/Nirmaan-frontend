@@ -2,10 +2,11 @@
 import React, { useEffect,useState } from 'react';
 import { useSelector , useDispatch } from 'react-redux';
 import authService from './appwrite/auth';
-import { RouterProvider } from 'react-router-dom';
-import { router } from './routes';
+
+import HomePage from './components/Homepage/HomePage';
 import {login, logout} from "./store/authSlice"
 import './App.css';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   const darkMode = useSelector((state) => state.theme.darkMode);
@@ -39,7 +40,7 @@ function App() {
 
   return !loading ? ( 
     <div className="App">
-      <RouterProvider router={router} />
+     <Outlet />
     </div>
   ):<div>building</div>
 }
