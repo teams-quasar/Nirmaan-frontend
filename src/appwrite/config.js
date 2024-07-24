@@ -1,26 +1,26 @@
-import conf from '../conf/conf'
+// import conf from '../conf/conf'
 
-import {client ,ID ,Databases,Storage,Query} from "appwrite"
+// import {client ,ID ,Databases,Storage,Query} from "appwrite"
 
-export class Service {
+// export class Service {
 
-    client = new Client();
-    account 
+//     client = new Client();
+//     account 
 
-    constructor() {
-        this.client.setEndpoint(conf.appwriteUrl);
-        this.client.setProject(conf.appwriteProjectId);
-        this.databases = new Databases(this.client)
-        this.bucket = new Storage(this.client)
-        this.account = new Account (this.client);
-    }
+//     constructor() {
+//         this.client.setEndpoint(conf.appwriteUrl);
+//         this.client.setProject(conf.appwriteProjectId);
+//         this.databases = new Databases(this.client)
+//         this.bucket = new Storage(this.client)
+//         this.account = new Account (this.client);
+//     }
 
-    // async createPost ({title , slug , content featuredImage})
-
-
+//     // async createPost ({title , slug , content featuredImage})
 
 
 
 
 
-}
+
+
+// }

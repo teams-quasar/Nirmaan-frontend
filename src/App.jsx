@@ -1,8 +1,10 @@
 // src/App.jsx
-import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect,useState } from 'react';
+import { useSelector , useDispatch } from 'react-redux';
+import authService from './appwrite/auth';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './routes';
+import {login, logout} from "./store/authSlice"
 import './App.css';
 
 function App() {
@@ -16,11 +18,30 @@ function App() {
     }
   }, [darkMode]);
 
-  return (
+//auth 
+
+  const [loading, setLoading] = useState(true)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    authService.getCurrentUser()
+    .then((userData) => {
+      if (userData) {
+        dispatch(login({userData}))
+      } else {
+        dispatch(logout())
+      }
+    })
+    .finally(() => setLoading(false))
+  }, [])
+
+
+
+  return !loading ? ( 
     <div className="App">
       <RouterProvider router={router} />
     </div>
-  );
+  ):<div>building</div>
 }
 
 export default App;
