@@ -12,11 +12,14 @@ function HomePage() {
       <Navigation />
       <AuthButtons />
     </header>
-    <div className="text-center">for other webpages use
-    <p>localhostxxxx/blogs</p>
-    <p>localhostxxxx/test</p>
-    <p>localhostxxxx/discover</p>
-    <p>localhostxxxx/wallet</p>
+    <div className="text-center">for other webpages
+    
+    <p>create account by signup </p>
+    <p>then</p>
+    <p>localhostxxxx/quiz/blogs</p>
+    <p>localhostxxxx/quiz/test</p>
+    <p>localhostxxxx/quiz/discover</p>
+    <p>localhostxxxx/quiz/wallet</p>
     </div>
     
     </>

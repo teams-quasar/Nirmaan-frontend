@@ -21,6 +21,102 @@ import App from "./App.jsx";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
+    // <Route path="/" element={<App />}>
+    //   <Route index element={<HomePage />} />
+    //   <Route
+    //     path="login"
+    //     element={
+    //       <AuthLayout authentication={false}>
+    //         <LoginPage />
+    //       </AuthLayout>
+    //     }
+    //   />
+    //   <Route
+    //     path="signup"
+    //     element={
+    //       <AuthLayout authentication={false}>
+    //         <SignUpPage />
+    //       </AuthLayout>
+    //     }
+    //   />
+    //   <Route
+    //     path="quiz"
+    //     element={
+    //       <AuthLayout authentication = {false} >
+    //         <Layout />
+    //       </AuthLayout>
+    //     }
+    //   >
+    //     <Route
+    //       path="blogs"
+    //       element={
+    //         <AuthLayout authentication={false}>
+    //           <BlogList />
+    //         </AuthLayout>
+    //       }
+    //     />
+    //     <Route
+    //       path="wallet"
+    //       element={
+    //         <AuthLayout authentication={false}>
+    //           <Wallet />
+    //         </AuthLayout>
+    //       }
+    //     />
+    //     <Route
+    //       path="discover"
+    //       element={
+    //         <AuthLayout authentication={false}>
+    //           <BlogList />
+    //         </AuthLayout>
+    //       }
+    //     />
+    //     <Route
+    //       path="test"
+    //       element={
+    //         <AuthLayout authentication={false}>
+    //           <MainContent />
+    //         </AuthLayout>
+    //       }
+    //     />
+    //   </Route>
+    // </Route>
+
+
+    // <Route path="/" element={<App />}>
+    //   <Route index element={<HomePage />} />
+    //   <Route
+    //     path="login"
+    //     element={
+    //       <AuthLayout authentication={false}>
+    //         <LoginPage />
+    //       </AuthLayout>
+    //     }
+    //   />
+    //   <Route
+    //     path="signup"
+    //     element={
+    //       <AuthLayout authentication={false}>
+    //         <SignUpPage />
+    //       </AuthLayout>
+    //     }
+    //   />
+    //   <Route
+    //     path="quiz"
+    //     element={
+    //       <AuthLayout authentication={false}>
+    //         <Layout />
+    //       </AuthLayout>
+    //     }
+    //   >
+    //     <Route index element={<MainContent />} />
+    //     <Route path="blogs" element={<BlogList />} />
+    //     <Route path="wallet" element={<Wallet />} />
+    //     <Route path="discover" element={<BlogList />} />
+    //     <Route path="test" element={<MainContent />} />
+    //   </Route>
+    // </Route>
+
     <Route path="/" element={<App />}>
       <Route index element={<HomePage />} />
       <Route
@@ -42,43 +138,17 @@ export const router = createBrowserRouter(
       <Route
         path="quiz"
         element={
-          <AuthLayout authentication>
+          <AuthLayout authentication ={true}>
             <Layout />
           </AuthLayout>
         }
       >
-        <Route
-          path="blogs"
-          element={
-            <AuthLayout authentication={false}>
-              <BlogList />
-            </AuthLayout>
-          }
-        />
-        <Route
-          path="wallet"
-          element={
-            <AuthLayout authentication={false}>
-              <Wallet />
-            </AuthLayout>
-          }
-        />
-        <Route
-          path="discover"
-          element={
-            <AuthLayout authentication={false}>
-              <BlogList />
-            </AuthLayout>
-          }
-        />
-        <Route
-          path="test"
-          element={
-            <AuthLayout authentication={false}>
-              <MainContent />
-            </AuthLayout>
-          }
-        />
+        {/* Ensure that Layout has an Outlet for rendering nested routes */}
+        <Route index element={<MainContent />} />
+        <Route path="blogs" element={<BlogList />} />
+        <Route path="wallet" element={<Wallet />} />
+        <Route path="discover" element={<BlogList />} />
+        <Route path="test" element={<MainContent />} />
       </Route>
     </Route>
   )

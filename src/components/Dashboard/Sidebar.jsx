@@ -5,31 +5,48 @@ import { Link, NavLink } from "react-router-dom";
 
 import ThemeSwitcher from '../../features/theme/themeSwitcher';
 
+import { useDispatch } from "react-redux"
+import authService from "../../appwrite/auth"
+import { logout } from "../../store/authSlice"
+
+function SLogoutBtn() {
+    const dispatch = useDispatch()
+    const logoutHandler = () => {
+        authService.logout().then(() => {
+            dispatch(logout())
+        })
+    }
+  
+}
+
+
 
 const sidebarItems = [
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/e69662981acab63aa64aa1912c25c27ffdf7548842bbbc32f3e8840991b488b0?apiKey=8a82faa9db93454483a68c973b38c7b0&",
     text: "My tests",
-    to: '/test'
+    to: '/quiz/test'
   },
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/49f56325d3f9f737f16e780de9c3b9f6f06f88a0ca7fda342128cd008869ffa0?apiKey=8a82faa9db93454483a68c973b38c7b0&",
     text: "Discover",    
-    to: '/discover'
+    to: '/quiz/discover'
   },
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/aa068a97d9c74226417b8a0b967e6b3ab77297120310ee40f1f2f9fcd0ffccd3?apiKey=8a82faa9db93454483a68c973b38c7b0&",
     text: "Wallet",
-    to: '/wallet'
+    to: '/quiz/wallet'
   },
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
     text: "Blogs",
-    to: '/blogs'
+    to: '/quiz/blogs'
   },
 ];
 
 const SidebarItem = ({ icon, text, to }) => {
+
+
   if (text === '/discover') {
     return (
       <Link
@@ -72,6 +89,13 @@ const SidebarItem = ({ icon, text, to }) => {
 
 
 function Sidebar() {
+
+  const dispatch = useDispatch()
+    const logoutHandler = () => {
+        authService.logout().then(() => {
+            dispatch(logout())
+        })
+    }
   return (
     <aside className="col-span-1  p-4">
       <div className="flex flex-col justify-center max-md:mt-8">
@@ -117,7 +141,7 @@ function Sidebar() {
               />
               <div className="flex-auto my-auto dark:text-white">Prajjawal Pandit</div>
             </div>
-            <button className="flex justify-center items-center px-2 w-8 h-8 bg-white rounded-md border border-gray-300 border-solid">
+            <button onClick = {logoutHandler} className="flex justify-center items-center px-2 w-8 h-8 bg-white rounded-md border border-gray-300 border-solid">
               <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a9859a78eb99bcbd27fe6539c74fff6970a216032b996c9f5005f49abce9fcf?apiKey=8a82faa9db93454483a68c973b38c7b0&"
