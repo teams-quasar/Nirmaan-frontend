@@ -13,10 +13,10 @@ function HomePage() {
       <AuthButtons />
     </header>
     <div className="text-center">for other webpages use
-    <p>localhost/blogs</p>
-    <p>localhost/test</p>
-    <p>localhost/discover</p>
-    <p>localhost/wallet</p>
+    <p>localhostxxxx/blogs</p>
+    <p>localhostxxxx/test</p>
+    <p>localhostxxxx/discover</p>
+    <p>localhostxxxx/wallet</p>
     </div>
     
     </>
