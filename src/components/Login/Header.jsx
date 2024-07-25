@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -13,9 +14,12 @@ function Header() {
         />
         <div className="my-auto">Nirmaan</div>
       </div>
-      <button className="justify-center px-4 py-2 text-sm font-medium leading-6 rounded-md bg-white bg-opacity-0 text-slate-900">
+      <Link
+        to="/signup"
+        className="font-medium text-primary transition-all duration-200 hover:underline"
+      >
         Sign Up
-      </button>
+      </Link>
     </header>
   );
 }
