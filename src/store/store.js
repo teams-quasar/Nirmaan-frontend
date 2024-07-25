@@ -1,6 +1,6 @@
 // src/app/store.js
 import { configureStore } from '@reduxjs/toolkit';
-import themeReducer from '../features/theme/themeSlice'; // Import default export correctly
+import themeReducer from './themeSlice'; 
 import authSlice from './authSlice';
 
 export const store = configureStore({

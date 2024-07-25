@@ -42,7 +42,7 @@ function App() {
     <div className="App">
      <Outlet />
     </div>
-  ):<div>building</div>
+  ):<h1 className='text-center text-4xl'>Loading</h1>
 }
 
 export default App;

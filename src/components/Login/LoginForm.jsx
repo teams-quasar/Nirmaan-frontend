@@ -67,9 +67,9 @@
 // export default LoginForm;
 import React, {useState} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
-// import {login as authLogin } from '../store/authSlice'
+
 import { login as authLogin } from '../../store/authSlice'
-// import {Button, Input, Logo} from "./index"
+
 import {useDispatch} from "react-redux"
 import authService from '../../appwrite/auth'
 import {useForm} from "react-hook-form"
@@ -87,12 +87,12 @@ function Login() {
           if (session) {
               const userData = await authService.getCurrentUser()
               if(userData) {
-                dispatch(authLogin(userData));              
+                dispatch(authLogin(userData));
+                console.log("navigate to quiz");
+                navigate("/quiz")     ;
+                console.log("after navigate to quiz");        
               }
-            //   if (userData){
-            //     navigate("/quiz")
-            //   }
-            //   navigate("/quiz")}
+           
           }
       } 
       
