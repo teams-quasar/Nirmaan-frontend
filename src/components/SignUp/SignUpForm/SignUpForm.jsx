@@ -1,4 +1,3 @@
-
 // import React from "react";
 // import InputField from "./InputField";
 // import CareerPathSelect from "./CareerPathSelect";
@@ -39,96 +38,155 @@
 
 //**************************DO NOT DELETE ABOVE COMMENT***************************
 
-import React, {useState} from 'react'
-import authService from '../../../appwrite/auth'
-import {Link ,useNavigate} from 'react-router-dom'
-import { login } from '../../../store/authSlice'
+import React, { useState } from "react";
+import authService from "../../../appwrite/auth";
+import { Link, useNavigate } from "react-router-dom";
+import { login } from "../../../store/authSlice";
 // import {Button, Input, Logo} from './index.js'
-import {useDispatch} from 'react-redux'
-import {useForm} from 'react-hook-form'
+import { useDispatch } from "react-redux";
+import { useForm } from "react-hook-form";
 
 function Signup() {
-    const navigate = useNavigate()
-    const [error, setError] = useState("")
-    const dispatch = useDispatch()
-    const {register, handleSubmit} = useForm()
+  const navigate = useNavigate();
+  const [error, setError] = useState("");
+  const dispatch = useDispatch();
+  const { register, handleSubmit } = useForm();
 
-    const create = async(data) => {
-        setError("")
-        try {
-            const userData = await authService.createAccount(data)
-            if (userData) {
-                const userData = await authService.getCurrentUser()
-                if(userData) {dispatch(login(userData))
-                navigate("/quiz")}
-                  // else {
-                  //   {dispatch(login(userData))
-                  //     navigate("/")}
-                  // }
-
-            }
-        } catch (error) {
-            setError(error.message)
+  const create = async (data) => {
+    setError("");
+    try {
+      const userData = await authService.createAccount(data);
+      if (userData) {
+        const userData = await authService.getCurrentUser();
+        if (userData) {
+          dispatch(login(userData));
+          navigate("/quiz");
         }
+        // else {
+        //   {dispatch(login(userData))
+        //     navigate("/")}
+        // }
+      }
+    } catch (error) {
+      setError(error.message);
     }
+  };
 
   return (
     <div className="flex items-center justify-center">
-            <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
-            <div className="mb-2 flex justify-center">
-                    <span className="inline-block w-full max-w-[100px]">
-                        {/* <Logo width="100%" /> */}
-                    </span>
-                </div>
-                <h2 className="text-center text-2xl font-bold leading-tight">Sign up to create account</h2>
-                <p className="mt-2 text-center text-base text-black/60">
-                    Already have an account?&nbsp;
-                    <Link
-                        to="/login"
-                        className="font-medium text-primary transition-all duration-200 hover:underline"
-                    >
-                        Sign In
-                    </Link>
-                </p>
-                {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
-
-                <form onSubmit={handleSubmit(create)}>
-                    <div className='space-y-5'>
-                        <input
-                        label="Full Name: "
-                        placeholder="Enter your full name"
-                        {...register("name", {
-                            required: true,
-                        })}
-                        />
-                        <input
-                        label="Email: "
-                        placeholder="Enter your email"
-                        type="email"
-                        {...register("email", {
-                            required: true,
-                            validate: {
-                                matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
-                                "Email address must be a valid address",
-                            }
-                        })}
-                        />
-                        <input
-                        label="Password: "
-                        type="password"
-                        placeholder="Enter your password"
-                        {...register("password", {
-                            required: true,})}
-                        />
-                        <button type="submit" className="w-full">
-                            Create Account
-                        </button>
-                    </div>
-                </form>
-            </div>
-
+  <div className="mx-auto w-full max-w-lg  rounded-xl ">
+    <div className="mb-2 flex justify-center">
+      <span className="inline-block w-full max-w-[100px]">
+        {/* <Logo width="100%" /> */}
+      </span>
     </div>
-  )
+    
+    {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
+
+    <form  onSubmit={handleSubmit(create)}>
+      <div className="flex flex-col mt-7 gap-3 text-sm leading-5 max-md:max-w-full">
+        <div className="flex flex-col space-y-1">
+          <label htmlFor="name" className="font-medium text-slate-900 max-md:max-w-full">
+            Full Name:
+          </label>
+          <input
+            id="name"
+            placeholder="Enter your full name"
+            className="justify-center items-start px-3 py-2 bg-white rounded-md border border-solid border-slate-300 max-md:pr-5 max-md:max-w-full"
+            {...register("name", {
+              required: true,
+            })}
+          />
+        </div>
+        <div  className ="flex flex-col space-y-1">
+          <label htmlFor="email" className="font-medium text-slate-900 max-md:max-w-full">
+            Email:
+          </label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+            className="justify-center items-start px-3 py-2 bg-white rounded-md border border-solid border-slate-300 max-md:pr-5 max-md:max-w-full"
+            {...register("email", {
+              required: true,
+              validate: {
+                matchPattern: (value) =>
+                  /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
+                  "Email address must be a valid address",
+              },
+            })}
+          />
+        </div>
+        <div className ="flex flex-col space-y-1">
+          <label htmlFor="password" className="font-medium text-slate-900 max-md:max-w-full">
+            Password:
+          </label>
+          <input
+            id="password"
+            type="password"
+            placeholder="Enter your password"
+            className="justify-center items-start px-3 py-2 bg-white rounded-md border border-solid border-slate-300 max-md:pr-5 max-md:max-w-full"
+            {...register("password", {
+              required: true,
+            })}
+          />
+        </div>
+        <div className ="flex flex-col space-y-1">
+          <label htmlFor="number" className="font-medium text-slate-900 max-md:max-w-full">
+            Phone Number:
+          </label>
+          <input
+            id="number"
+            type="tel"
+            placeholder="Enter your phone number"
+            className="justify-center items-start px-3 py-2 bg-white rounded-md border border-solid border-slate-300 max-md:pr-5 max-md:max-w-full"
+            {...register("number", {
+              required: true,
+            })}
+          />
+        </div>
+        <div className ="flex flex-col space-y-1">
+          <label htmlFor="career" className="font-medium text-slate-900 max-md:max-w-full">
+            Your Career Path
+          </label>
+          <select
+            id="career"
+            className="justify-center items-start px-3 py-2 bg-white rounded-md border border-solid border-slate-300 max-md:pr-5 max-md:max-w-full"
+            {...register("career", { required: "Career path is required" })}
+          >
+            <option value="">Select a career path</option>
+            <option value="developer">Agniveer</option>
+            <option value="designer">NDA</option>
+            <option value="manager">CRPF</option>
+          </select>
+        </div>
+        <div className="mt-1.5 text-slate-500 max-md:max-w-full">
+        You will be able to change path in future in your profile section
+      </div>
+      <div className="flex items-center space-x-2">
+          <input
+            id="terms"
+            type="checkbox"
+            className="h-4 w-4 text-indigo-600 border-gray-300 rounded"
+            {...register("terms", {
+              required: "You must accept the terms and conditions",
+            })}
+          />
+          <label htmlFor="terms" className="text-slate-900">
+            I accept the&nbsp;
+            <a href="/terms" className="text-primary hover:underline">
+              terms and conditions
+            </a>
+          </label>
+        </div>
+        <button type="submit" className="justify-center self-start px-4 py-2 mt-5 text-sm font-medium leading-6 text-white whitespace-nowrap rounded-md bg-slate-900">
+          Create Account
+        </button>
+      </div>
+    </form>
+  </div>
+</div>)
+
 }
 
-export default Signup
+export default Signup;

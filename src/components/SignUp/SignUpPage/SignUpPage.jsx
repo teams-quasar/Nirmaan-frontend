@@ -18,7 +18,7 @@ const SignUpPage = () => {
             <h1 className="mt-24 text-2xl font-semibold tracking-normal leading-8 text-black max-md:mt-10 max-md:max-w-full">
               Join Us
             </h1>
-            <p className="mt-3 text-sm leading-5 text-slate-500 max-md:max-w-full">
+            <p className="mt-3 text-sm leading-5 text-slate-500 max-md:max-w-full mb-4">
               Sign up using your email and setup a password
             </p>
             <SignUpForm />

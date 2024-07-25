@@ -1,11 +1,15 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LoginButton = () => {
   return (
-    <button className="justify-center px-4 py-2 text-sm font-medium leading-6 rounded-md bg-white bg-opacity-0 text-slate-900">
-      Log In
-    </button>
+    <Link
+        to="/login"
+        className="font-medium text-primary transition-all duration-200 hover:underline"
+      >
+        Log In
+      </Link>
   );
 };
 
