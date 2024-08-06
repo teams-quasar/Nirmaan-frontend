@@ -123,8 +123,11 @@ function Sidebar() {
               to={item.to} // Assuming each item has a `to` property
             />
           ))}
-
+x
           <hr className="shrink-0 h-px bg-gray-300 border border-gray-300 border-solid mt-[673px] max-md:mt-10" />
+          
+          //footer
+          
           <div className="flex gap-5 justify-between mt-3.5 w-full">
             <div className="flex gap-2.5 self-start text-sm font-medium leading-6 text-black">
               <img

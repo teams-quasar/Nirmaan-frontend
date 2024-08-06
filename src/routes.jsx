@@ -18,6 +18,7 @@ import HomePage from "./components/Homepage/HomePage.jsx";
 // import ThemeSwitcher from "./features/theme/ThemeSwitcher";
 import AuthLayout from "./utils/AuthLayout.jsx";
 import App from "./App.jsx";
+import TestComponent from "./components/TestComponent/TestComponent.jsx";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -44,7 +45,7 @@ export const router = createBrowserRouter(
       <Route
         path="quiz"
         element={
-          <AuthLayout authentication ={true}>
+          <AuthLayout authentication ={false}>
             <Layout />
           </AuthLayout>
         }
@@ -53,7 +54,7 @@ export const router = createBrowserRouter(
         <Route index element={<MainContent />} />
         <Route path="blogs" element={<BlogList />} />
         <Route path="wallet" element={<Wallet />} />
-        <Route path="discover" element={<BlogList />} />
+        <Route path="discover" element={<TestComponent />} />
         <Route path="test" element={<MainContent />} />
       </Route>
     </Route>
