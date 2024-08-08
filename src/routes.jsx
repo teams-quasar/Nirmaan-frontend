@@ -16,9 +16,11 @@ import LoginPage from "./components/Login/LoginPage.jsx";
 import Wallet from "./components/Wallet/Wallet.jsx";
 import HomePage from "./components/Homepage/HomePage.jsx";
 // import ThemeSwitcher from "./features/theme/ThemeSwitcher";
+import BlogListCo from "./components/BlogCord/BlogList.jsx";
 import AuthLayout from "./utils/AuthLayout.jsx";
 import App from "./App.jsx";
 import TestComponent from "./components/TestComponent/TestComponent.jsx";
+
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -56,6 +58,7 @@ export const router = createBrowserRouter(
         <Route path="wallet" element={<Wallet />} />
         <Route path="discover" element={<TestComponent />} />
         <Route path="test" element={<MainContent />} />
+        <Route path="blogscord" element={<BlogListCo />} />
       </Route>
     </Route>
   )
