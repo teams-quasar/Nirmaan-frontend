@@ -43,6 +43,41 @@ const sidebarItems = [
     text: "Blogs",
     to: '/quiz/blogs'
   },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Blogs Cord..",
+    to: '/quiz/blogs'
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Question Pool",
+    to: '/quiz/blogs'
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Exam Schemas",
+    to: '/quiz/blogs'
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Analytics",
+    to: '/quiz/blogs'
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Team",
+    to: '/quiz/blogs'
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Students",
+    to: '/quiz/blogs'
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Organization",
+    to: '/quiz/blogs'
+  },
 ];
 
 const SidebarItem = ({ icon, text, to }) => {
@@ -123,10 +158,10 @@ function Sidebar() {
               to={item.to} // Assuming each item has a `to` property
             />
           ))}
-x
+
           <hr className="shrink-0 h-px bg-gray-300 border border-gray-300 border-solid mt-[673px] max-md:mt-10" />
           
-          //footer
+          
           
           <div className="flex gap-5 justify-between mt-3.5 w-full">
             <div className="flex gap-2.5 self-start text-sm font-medium leading-6 text-black">
@@ -157,12 +192,5 @@ x
 
 export default Sidebar;
 
-{/* <hr className="shrink-0 mt-6 h-px bg-gray-300 border border-gray-300 border-solid" />
-          {sidebarItems.map((item, index) => (
-            <SidebarItem
-              key={index}
-              icon={item.icon}
-              text={item.text}
-              active={item.active}
-            /> 
-            ))}*/}
+
+            
