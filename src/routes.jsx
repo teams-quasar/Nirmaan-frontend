@@ -21,6 +21,7 @@ import QuestionPool from "./components/QuestionPool/QuestionPool.jsx";
 import AuthLayout from "./utils/AuthLayout.jsx";
 import App from "./App.jsx";
 import TestComponent from "./components/TestComponent/TestComponent.jsx";
+import ExamSchemas from "./components/ExamSchemas/ExamSchemas.jsx";
 
 
 export const router = createBrowserRouter(
@@ -61,6 +62,7 @@ export const router = createBrowserRouter(
         <Route path="test" element={<MainContent />} />
         <Route path="blogscord" element={<BlogListCo />} />
         <Route path="question_pool" element={<QuestionPool />} />
+        <Route path="exam_schema" element={<ExamSchemas />} />
       </Route>
     </Route>
   )
