@@ -5,7 +5,7 @@ import ExamList from "./ExamList";
 function MainContent() {
   return (
    
-    <main className="flex flex-col ml-5 w-[79%] max-md:ml-0 max-md:w-full">
+    
       <div className="flex flex-col mt-14 max-md:mt-10 max-md:max-w-full">
         <h1 className="text-3xl font-semibold tracking-tight leading-9 text-black max-md:max-w-full dark:text-white">
           Question Pool
@@ -35,8 +35,7 @@ function MainContent() {
               />
               <span>Filters</span>
             </button>
-          </div>
-          <button className="flex gap-2 justify-center px-4 py-2 text-sm font-medium leading-6 text-black whitespace-nowrap bg-white rounded-md border border-gray-300 border-solid">
+            <button className="flex gap-2 justify-center px-4 py-2 text-sm font-medium leading-6 text-black whitespace-nowrap bg-white rounded-md border border-gray-300 border-solid">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c56d97cbb4bedc75230dcea7b2c5a69e019203c7d6ee158a02b323809a9bbc3?apiKey=8a82faa9db93454483a68c973b38c7b0&"
@@ -45,10 +44,20 @@ function MainContent() {
             />
             <span>View</span>
           </button>
+          </div>
+          <button className="flex gap-2 justify-center px-4 py-2 text-sm font-medium leading-6 text-white whitespace-nowrap bg-black rounded-md border border-gray-300 border-solid">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c56d97cbb4bedc75230dcea7b2c5a69e019203c7d6ee158a02b323809a9bbc3?apiKey=8a82faa9db93454483a68c973b38c7b0&"
+              alt=""
+              className="shrink-0 my-auto w-4 aspect-square"
+            />
+            <span>Add Questions</span>
+          </button>
         </div>
         <ExamList />
       </div>
-    </main>
+    
     
   );
 }
