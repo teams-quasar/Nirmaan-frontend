@@ -15,7 +15,7 @@ const BlogDescription = ({ description }) => (
         </label>
         <textarea
           id="blogDescription"
-          className="gap-2.5 self-stretch px-3 pt-2 pb-14 mt-1.5 bg-white rounded-md border border-solid border-slate-300 min-h-[80px] text-slate-400 w-[506px] max-md:max-w-full"
+          className="gap-2.5 self-stretch px-3 pt-2 pb-14 mt-1.5 bg-white rounded-md border border-solid border-slate-300 min-h-[80px] text-slate-400  max-md:max-w-full"
           placeholder="Blog description goes here"
           value={description}
         ></textarea>

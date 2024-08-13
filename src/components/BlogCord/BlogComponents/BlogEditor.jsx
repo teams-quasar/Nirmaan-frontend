@@ -20,7 +20,7 @@ function BlogEditor() {
             <BlogTitle title="Blog Title" />
             <BlogDescription description="Blog description goes here" />
           </div>
-          <img
+          <img  
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/23a979084e1caf06971cdc3871ead192bf09178630689dfe54c437b4b7f280db?placeholderIfAbsent=true&apiKey=8a82faa9db93454483a68c973b38c7b0"
             className="object-contain self-end mt-14 w-6 aspect-square max-md:mt-10 max-md:mr-2"

@@ -5,6 +5,8 @@ import { useState } from "react";
 import BlogFilter from "./BlogFilter";
 import BlogView from "./BlogView";
 import BlogNew from "./NewBlog";
+import BlogEditor from './BlogComponents/BlogEditor'
+
 
 const blogData = [
   {
@@ -69,6 +71,14 @@ const blogData = [
 function BlogListCo() {
   const [filteredBlogs, setFilteredBlogs] = useState(blogData);
 
+  const [isChildVisible, setIsChildVisible] = useState(false);
+  
+  const toggleChildVisibility = () => {
+    setIsChildVisible(!isChildVisible);
+  };
+
+  
+
   const handleSearch = (searchTerm) => {
     const filtered = blogData.filter(
       (blog) =>
@@ -78,17 +88,38 @@ function BlogListCo() {
     setFilteredBlogs(filtered);
   };
   return (
+    <>
+    
     <div className="flex flex-col mt-14 max-md:mt-10 max-md:max-w-full">
+    
+    {isChildVisible && (
+    // <div className="fixed inset-y-0 right-0 w-full  overflow-auto z-50">
+    //   <div className=" p-4 h-full rounded-l-lg">
+    //     <BlogEditor />
+    //   </div>
+    // </div>
+    <div className="fixed inset-y-0 right-10 w-full max-w-xl overflow-auto z-50">
+    <div className="p-4 h-full rounded-l-lg">
+      <BlogEditor />
+    </div>  
+  </div>
+  )}
+
+
+
+
       <h1 className="text-3xl font-semibold tracking-tight leading-9 text-black max-md:max-w-full dark:text-white">
         Blogs
       </h1>
       <div className="flex flex-row mt-4 justify-between">
+      
         <div className="flex flex-row gap-8">
+        
           <BlogSearch onSearch={handleSearch} />
           <BlogFilter />
           <BlogView />
         </div>
-        <BlogNew />
+        <BlogNew toggleVisibility={toggleChildVisibility} />
       </div>
       <section className="mt-12 max-md:mt-10 max-md:max-w-full">
         <div className="  grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -98,19 +129,18 @@ function BlogListCo() {
         </div>
       </section>
       <section className="mt-12 max-md:mt-10 max-md:max-w-full">
-        {/* <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-          {blogData.map((blog, index) => (
-            <BlogCard key={index} {...blog} />
-          ))}
-        </div> */}
-        {/* <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-    {blogData.map((blog, index) => (
-      <BlogCard key={index} {...blog} />
-    ))}
-  </div> */}
+        
       </section>
+      
     </div>
+    </>
   );
 }
 
 export default BlogListCo;
+{/* {isChildVisible && (
+    <div className="fixed inset-0 overflow-auto flex items-start  z-50">
+      <div className="  rounded-lg w-full justify-end  ">
+        <BlogEditor />
+      </div>
+    </div>   )}*/}
