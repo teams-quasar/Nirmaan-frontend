@@ -61,22 +61,22 @@ const sidebarItems = [
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
     text: "Analytics",
-    to: '/quiz/blogs'
+    to: '/quiz/analytics'
   },
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
     text: "Team",
-    to: '/quiz/blogs'
+    to: '/quiz/team'
   },
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
     text: "Students",
-    to: '/quiz/blogs'
+    to: '/quiz/students'
   },
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
-    text: "Organization",
-    to: '/quiz/blogs'
+    text: "Organisation",
+    to: '/quiz/organisation'
   },
 ];
 
