@@ -4,7 +4,7 @@ import BlogCard from "./BlogCard";
 import { useState } from "react";
 import BlogFilter from "./BlogFilter";
 import BlogView from "./BlogView";
-import BlogNew from "./NewBlog";
+import BlogNew from "./BlogNew";
 import BlogEditor from './BlogComponents/BlogEditor'
 
 
@@ -98,10 +98,10 @@ function BlogListCo() {
     //     <BlogEditor />
     //   </div>
     // </div>
-    <div className="fixed inset-y-0 right-10 w-full max-w-xl overflow-auto z-50">
+    <div className="fixed inset-y-0 right-0 w-full max-w-xl overflow-auto z-50">
     <div className="p-4 h-full rounded-l-lg">
-      <BlogEditor />
-    </div>  
+      <BlogEditor  toggleVisibility={toggleChildVisibility} />
+    </div>
   </div>
   )}
 

@@ -10,13 +10,13 @@ import Tag from "./Tag";
 import ActionButton from "./ActionButton";
 import StatisticItem from "./StatisticItem";
 
-function BlogEditor() {
+function BlogEditor({toggleVisibility}) {
   return (
     <main className="flex flex-col rounded-none max-w-[600px]">
-      <section className="flex flex-col pt-8 pb-40 w-full bg-white shadow-[-5px_0px_20px_rgba(0,0,0,0.25)] max-md:pb-24 max-md:max-w-full">
+      <section className="flex flex-col pt-8 pb-40 w-full bg-white shadow-[0px_0px_20px_rgba(0,0,0,0.1)] max-md:pb-24 max-md:max-w-full">
         <div className="flex z-10 flex-col px-8 w-full text-sm leading-none max-md:px-5 max-md:max-w-full">
           <div className="flex flex-col w-full max-md:max-w-full">
-            <BlogHeader isPublished={true} />
+            <BlogHeader isPublished={true} toggleVisibility = {toggleVisibility} />
             <BlogTitle title="Blog Title" />
             <BlogDescription description="Blog description goes here" />
           </div>
