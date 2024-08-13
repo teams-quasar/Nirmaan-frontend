@@ -71,13 +71,6 @@ const blogData = [
 function BlogListCo() {
   const [filteredBlogs, setFilteredBlogs] = useState(blogData);
 
-  const [isChildVisible, setIsChildVisible] = useState(false);
-  
-  const toggleChildVisibility = () => {
-    setIsChildVisible(!isChildVisible);
-  };
-
-  
 
   const handleSearch = (searchTerm) => {
     const filtered = blogData.filter(
@@ -91,23 +84,9 @@ function BlogListCo() {
     <>
     
     <div className="flex flex-col mt-14 max-md:mt-10 max-md:max-w-full">
+
+      <BlogEditor />
     
-    {isChildVisible && (
-    // <div className="fixed inset-y-0 right-0 w-full  overflow-auto z-50">
-    //   <div className=" p-4 h-full rounded-l-lg">
-    //     <BlogEditor />
-    //   </div>
-    // </div>
-    <div className="fixed inset-y-0 right-0 w-full max-w-xl overflow-auto z-50">
-    <div className="p-4 h-full rounded-l-lg">
-      <BlogEditor  toggleVisibility={toggleChildVisibility} />
-    </div>
-  </div>
-  )}
-
-
-
-
       <h1 className="text-3xl font-semibold tracking-tight leading-9 text-black max-md:max-w-full dark:text-white">
         Blogs
       </h1>
@@ -119,7 +98,7 @@ function BlogListCo() {
           <BlogFilter />
           <BlogView />
         </div>
-        <BlogNew toggleVisibility={toggleChildVisibility} />
+        <BlogNew />
       </div>
       <section className="mt-12 max-md:mt-10 max-md:max-w-full">
         <div className="  grid grid-cols-1 gap-5 md:grid-cols-2">
