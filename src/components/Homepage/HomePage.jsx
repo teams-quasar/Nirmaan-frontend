@@ -12,10 +12,12 @@ function HomePage() {
       <Navigation />
       <AuthButtons />
     </header>
+
     <div className="text-center"><p>for other webpages</p>
     
     <p>click on my test to directly login </p>
     
+
     </div>
     
     </>
