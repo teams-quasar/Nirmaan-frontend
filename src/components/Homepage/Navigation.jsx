@@ -1,5 +1,6 @@
 
 import React from "react";
+
 import { Link } from "react-router-dom";
 
 function Navigation() {
@@ -29,17 +30,9 @@ function Navigation() {
                       </button>
                     </Link>
 ))}</nav>
+
   );
 }
 
 export default Navigation;
 
-
-// {navItems.map((item) => (
-//   <button
-//     key={item}
-//     className="flex flex-col justify-center px-4 py-2 bg-white"
-//   >
-//     <div className="justify-center">{item}</div>
-//   </button>
-// ))}
