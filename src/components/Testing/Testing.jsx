@@ -1,5 +1,5 @@
 import React from 'react'
-import TableData.json
+import data from '../../Json/TableData.json'
 function Testing() {
   return (
     <>

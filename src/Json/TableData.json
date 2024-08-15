@@ -1,0 +1,18 @@
+[
+    {
+      "title": "Quiz 1",
+      "questionCount": 10,
+      "duration": "30 mins",
+      "attempts": 5,
+      "status": "Completed"
+    },
+    {
+      "title": "Quiz 2",
+      "questionCount": 15,
+      "duration": "45 mins",
+      "attempts": 3,
+      "status": "Pending"
+    }
+   
+  ]
+  
