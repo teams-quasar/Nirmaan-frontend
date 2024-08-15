@@ -78,6 +78,11 @@ const sidebarItems = [
     text: "Organisation",
     to: '/quiz/organisation'
   },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Testing Components",
+    to: '/quiz/testing'
+  },
 ];
 
 const SidebarItem = ({ icon, text, to }) => {

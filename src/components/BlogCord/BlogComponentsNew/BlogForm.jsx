@@ -3,14 +3,24 @@ import React from "react";
 import TagInput from "./TagInput";
 import Tag from "./Tag";
 import Button from "./Button";
+import { useSelector } from "react-redux";
+import CloseBotton from "./CloseBotton";
 
-function BlogForm() {
+function BlogNewForm() {
   const tags = [
     { id: 1, text: "Tag1" },
     { id: 2, text: "Some other tag" },
   ];
 
+  const isVisible = useSelector((state) => state.blogNewEditor.isVisible);
+
+  if (!isVisible) {
+    return null;
+  }
+
   return (
+    <div className="fixed inset-y-0 right-0 w-full max-w-xl overflow-auto z-50">
+    <div className="p-4 h-full rounded-l-lg">
     <form className="flex flex-col text-sm rounded-none max-w-[600px]">
       <section className="flex flex-col pt-8 w-full bg-white pb-[505px] shadow-[-5px_0px_20px_rgba(0,0,0,0.25)] max-md:pb-24 max-md:max-w-full">
         <div className="flex flex-col px-8 w-full leading-none max-md:px-5 max-md:max-w-full">
@@ -25,12 +35,8 @@ function BlogForm() {
                 />
                 <span className="self-stretch my-auto">New Blog</span>
               </div>
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/75971904da857823c437cb2eb2c6ef1b8ab27ab6db876fa727bf66c43e016bc6?placeholderIfAbsent=true&apiKey=8a82faa9db93454483a68c973b38c7b0"
-                className="object-contain shrink-0 w-6 aspect-square"
-                alt=""
-              />
+             <CloseBotton />
+              {/* // idhar blog close button*/}
             </div>
             <div className="flex flex-col mt-8 w-full max-md:max-w-full">
               <label htmlFor="blogTitle" className="font-medium text-slate-900">
@@ -56,7 +62,7 @@ function BlogForm() {
                   </label>
                   <textarea
                     id="blogDescription"
-                    className="gap-2.5 self-stretch px-3 pt-2 pb-14 mt-1.5 bg-white rounded-md border border-solid border-slate-300 min-h-[80px] text-slate-400 w-[506px] max-md:max-w-full"
+                    className="gap-2.5 self-stretch px-3 pt-2 pb-14 mt-1.5 bg-white rounded-md border border-solid border-slate-300 min-h-[80px] text-slate-400 max-md:max-w-full"
                     placeholder="Blog description goes here"
                   ></textarea>
                   <p className="mt-1.5 text-slate-500">
@@ -87,7 +93,9 @@ function BlogForm() {
         </div>
       </section>
     </form>
+    </div>
+    </div>
   );
 }
 
-export default BlogForm;
+export default BlogNewForm;

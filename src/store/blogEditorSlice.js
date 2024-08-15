@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const blogEditorSlice = createSlice({
-  name: 'blogEditor',
+  name: 'blogNewEditor',
   initialState: {
     isVisible: false,
   },

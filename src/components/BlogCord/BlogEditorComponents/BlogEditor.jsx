@@ -79,7 +79,7 @@ function BlogEditor() {
             </h2>
             <StatisticItem
               icon="https://cdn.builder.io/api/v1/image/assets/TEMP/b0e0684022dd40e936f128c744b3409df4fd99c457b3cb8bed70ec9d6f855e14?placeholderIfAbsent=true&apiKey=8a82faa9db93454483a68c973b38c7b0"
-              text="Total Views: 9878"
+              text="Total Views: 9873"
             />
             <StatisticItem
               icon="https://cdn.builder.io/api/v1/image/assets/TEMP/fd44d81c7989cc5f7356c2d07820ee88685c6d3d54775071769c3d0eeefc72c2?placeholderIfAbsent=true&apiKey=8a82faa9db93454483a68c973b38c7b0"

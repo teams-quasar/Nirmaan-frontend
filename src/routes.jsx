@@ -16,7 +16,7 @@ import LoginPage from "./components/Login/LoginPage.jsx";
 import Wallet from "./components/Wallet/Wallet.jsx";
 import HomePage from "./components/Homepage/HomePage.jsx";
 // import ThemeSwitcher from "./features/theme/ThemeSwitcher";
-import BlogListCo from "./components/BlogCord/BlogList.jsx";
+import BlogListCo from "./components/BlogCord/BlogCordPage/BlogList.jsx";
 import QuestionPool from "./components/QuestionPool/QuestionPool.jsx";
 import AuthLayout from "./utils/AuthLayout.jsx";
 import App from "./App.jsx";
@@ -24,8 +24,11 @@ import TestComponent from "./components/TestComponent/TestComponent.jsx";
 import ExamSchemas from "./components/ExamSchemas/ExamSchemas.jsx";
 import Team from "./components/Team/Team.jsx";
 import Students from "./components/Students/Students.jsx";
-import Organisation from "./components/Orgnaisation/Organisation.jsx";
+// import Organisation from "./components/Orgnaisation/Organisation.jsx";
 import Analytics from "./components/Analytics/Analytics.jsx";
+import BlogForm from "./components/BlogCord/BlogComponentsNew/BlogForm.jsx";
+import Organisation from "./components/Orgnaisation/Organisation.jsx";
+import Testing from "./components/Testing/Testing.jsx";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -71,6 +74,7 @@ export const router = createBrowserRouter(
         <Route path="team" element={<Team />} />
         <Route path="organisation" element={<Organisation />} />
         <Route path="analytics" element={<Analytics />} />
+        <Route path="testing" element={<Testing />} />
       </Route>
     </Route>
   )

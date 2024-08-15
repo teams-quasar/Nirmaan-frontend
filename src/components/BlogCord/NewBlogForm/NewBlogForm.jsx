@@ -4,8 +4,12 @@ import Button from "./Button";
 import TagInput from "./TagInput";
 import TextInput from "./TextInput";
 import TextArea from "./TextArea";
+import { useDispatch, useSelector } from "react-redux";
 
-const NewBlogForm = () => {
+function NewBlogForm ()  {
+  
+  
+
   return (
     <form className="flex flex-col text-sm rounded-none max-w-[600px]">
       <div className="flex flex-col pt-8 w-full bg-white pb-[505px] shadow-[-5px_0px_20px_rgba(0,0,0,0.25)] max-md:pb-24 max-md:max-w-full">
@@ -19,7 +23,7 @@ const NewBlogForm = () => {
                   alt=""
                   className="object-contain shrink-0 self-stretch my-auto w-3.5 aspect-square"
                 />
-                <span className="self-stretch my-auto">New Blog</span>
+                <span className="self-stretch my-auto">New Blogggg</span>
               </div>
               <img
                 loading="lazy"
