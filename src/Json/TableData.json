@@ -8,9 +8,30 @@
     },
     {
       "title": "Quiz 2",
-      "questionCount": 15,
-      "duration": "45 mins",
+      "questionCount": 16,
+      "duration": "30 mins",
       "attempts": 3,
+      "status": "Pending"
+    },
+    {
+      "title": "Quiz 3",
+      "questionCount": 19,
+      "duration": "45 mins",
+      "attempts": 4,
+      "status": "Pending"
+    },
+    {
+      "title": "Quiz 4",
+      "questionCount": 55,
+      "duration": "25 mins",
+      "attempts": 3,
+      "status": "Completed"
+    },
+    {
+      "title": "Quiz 5",
+      "questionCount": 70,
+      "duration": "15 mins",
+      "attempts": 5,
       "status": "Pending"
     }
    
