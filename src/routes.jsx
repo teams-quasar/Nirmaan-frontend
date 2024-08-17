@@ -22,6 +22,7 @@ import BlogListCo from "./components/BlogCord/BlogCordPage/BlogList.jsx";
 import QuestionPool from "./components/QuestionPool/QuestionPool.jsx";
 import AuthLayout from "./utils/AuthLayout.jsx";
 import App from "./App.jsx";
+
 import TestComponent from "./components/TestComponent/TestComponent.jsx";
 import ExamSchemas from "./components/ExamSchemas/ExamSchemas.jsx";
 import Team from "./components/Team/Team.jsx";
@@ -31,6 +32,7 @@ import Analytics from "./components/Analytics/Analytics.jsx";
 import BlogForm from "./components/BlogCord/BlogComponentsNew/BlogForm.jsx";
 import Organisation from "./components/Orgnaisation/Organisation.jsx";
 import Testing from "./components/Testing/Testing.jsx";
+
 
 
 export const router = createBrowserRouter(
@@ -69,7 +71,9 @@ export const router = createBrowserRouter(
         <Route index element={<MainContent />} />
         <Route path="blogs" element={<BlogList />} />
         <Route path="wallet" element={<Wallet />} />
+
         <Route path="discover" element={<TestComponent />} />
+
         <Route path="test" element={<MainContent />} />
         <Route path="blogscord" element={<BlogListCo />} />
         <Route path="question_pool" element={<QuestionPool />} />
