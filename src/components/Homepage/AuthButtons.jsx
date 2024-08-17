@@ -3,7 +3,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import {useNavigate} from 'react-router-dom'
 import LogoutBtn from "./LogoutBtn";
+
 import QuizButton from "./QuizButton";
+
 
 
 function AuthButtons() {
@@ -46,6 +48,7 @@ function AuthButtons() {
               </li>
             ) : null
             )}
+
             <div className="flex flex-row gap-2">
             {authStatus && (
               <li className="border border-black bg-white text-black">
@@ -53,13 +56,16 @@ function AuthButtons() {
               </li>
               
             )}
+
             {authStatus && (
               <li className="border border-black bg-white text-black">
                 <LogoutBtn />
               </li>
+
               
             )}
             </div>
+
           </ul>
           </nav>
     {/* <div className="flex gap-5 leading-6">

@@ -8,7 +8,9 @@ import ThemeSwitcher from '../../features/theme/themeSwitcher';
 import { useDispatch } from "react-redux"
 import authService from "../../appwrite/auth"
 import { logout } from "../../store/authSlice"
+ HEAD
 import NirmanButton from "../NirmanButton/NirmanButton";
+
 
 function SLogoutBtn() {
     const dispatch = useDispatch()
@@ -102,7 +104,9 @@ function Sidebar() {
       <div className="flex flex-col justify-center max-md:mt-8">
         <nav className="flex flex-col px-2.5 pt-6 pb-3.5 bg-white border-r border-gray-300 border-solid dark:bg-black  ">
           <div className="flex gap-5 justify-between ml-2.5 ">
+
             <NirmanButton />
+
             <button className="flex justify-center items-center px-2 w-8 h-8 bg-white rounded-md border border-gray-300 border-solid dark:bg-black dark:text-white">
               <img
                 loading="lazy"
@@ -123,11 +127,13 @@ function Sidebar() {
               to={item.to} // Assuming each item has a `to` property
             />
           ))}
+
 x
           <hr className="shrink-0 h-px bg-gray-300 border border-gray-300 border-solid mt-[673px] max-md:mt-10" />
           
           //footer
           
+
           <div className="flex gap-5 justify-between mt-3.5 w-full">
             <div className="flex gap-2.5 self-start text-sm font-medium leading-6 text-black">
               <img
