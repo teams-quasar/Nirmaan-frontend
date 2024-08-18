@@ -6,7 +6,7 @@ import ActionButton from "./ActionButton";
 
 function AddNewSection() {
   return (
-    <section className="flex overflow-hidden flex-col py-9 bg-white rounded-3xl max-w-[600px]">
+    <section className="flex overflow-hidden flex-col py-9 bg-white rounded-3xl max-w-[600px] shadow-[-5px_0px_20px_rgba(0,0,0,0.25)]">
       <header className="flex flex-col px-8 pb-2 w-full max-md:px-5 max-md:max-w-full">
         <div className="flex flex-wrap gap-5 justify-between text-xl font-semibold tracking-normal leading-snug text-black max-md:max-w-full">
           <h1>Add new section</h1>
@@ -29,25 +29,29 @@ function AddNewSection() {
           alt=""
         />
       </header>
+     
       <main className="flex flex-col px-8 mt-5 w-full text-sm leading-none max-md:px-5 max-md:max-w-full">
-        <MarkingScheme />
-        <InputField
-          label="Total Questions :"
-          placeholder="Total Number of Questions"
-        />
-        <div className="flex gap-5 mt-8 max-w-full font-medium leading-6 text-white w-[338px]">
-          <ActionButton
-            text="Save changes"
-            iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/379f927a565248f2f8527fb79bc8b342ec6a43aaa241fabf84822afa7b661501?placeholderIfAbsent=true&apiKey=8a82faa9db93454483a68c973b38c7b0"
-            bgColor="bg-slate-900"
-          />
-          <ActionButton
-            text="Discard changes"
-            iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/a3dbd45e6e7ee33e5fe9ed4f7974be29a7958689bc09f380978c683278d84ea3?placeholderIfAbsent=true&apiKey=8a82faa9db93454483a68c973b38c7b0"
-            bgColor="bg-red-700"
-          />
-        </div>
-      </main>
+  <MarkingScheme />
+  <InputField
+    label="Total Questions :"
+    placeholder="Total Number of Questions"
+  />
+  <div className="flex gap-5 mt-8 justify-center font-medium leading-6 text-white">
+    <ActionButton
+      width="w-32"
+      text="Save changes"
+      iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/379f927a565248f2f8527fb79bc8b342ec6a43aaa241fabf84822afa7b661501?placeholderIfAbsent=true&apiKey=8a82faa9db93454483a68c973b38c7b0"
+      bgColor="bg-slate-900"
+    />
+    <ActionButton
+      width="w-52"
+      text="Discard changes"
+      iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/a3dbd45e6e7ee33e5fe9ed4f7974be29a7958689bc09f380978c683278d84ea3?placeholderIfAbsent=true&apiKey=8a82faa9db93454483a68c973b38c7b0"
+      bgColor="bg-red-700"
+    />
+  </div>
+</main>
+
     </section>
   );
 }

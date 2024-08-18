@@ -16,7 +16,7 @@ function Header() {
       <img
         loading="lazy"
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/75971904da857823c437cb2eb2c6ef1b8ab27ab6db876fa727bf66c43e016bc6?placeholderIfAbsent=true&apiKey=8a82faa9db93454483a68c973b38c7b0"
-        alt=""
+        alt="x"
         className="object-contain shrink-0 w-6 aspect-square"
       />
     </header>

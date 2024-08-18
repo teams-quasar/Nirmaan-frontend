@@ -32,6 +32,12 @@ import Analytics from "./components/Analytics/Analytics.jsx";
 import BlogForm from "./components/BlogCord/BlogComponentsNew/BlogForm.jsx";
 import Organisation from "./components/Orgnaisation/Organisation.jsx";
 import Testing from "./components/Testing/Testing.jsx";
+import ExamSchema from "./components/ExamSchemas/NewExamSchema/ExamSchema.jsx";
+import ExamSchemaE from "./components/ExamSchemas/MarketPlace/MarketPlace.jsx";
+import MarketPlace from "./components/ExamSchemas/MarketPlace/MarketPlace.jsx";
+import EditSection from "./components/ExamSchemas/EditSection/EditSection.jsx";
+import AddNewSection from "./components/ExamSchemas/AddNewSection/AddNewSection.jsx";
+
 
 
 
@@ -84,10 +90,10 @@ export const router = createBrowserRouter(
         <Route path="organisation" element={<Organisation />} />
         <Route path="analytics" element={<Analytics />} />
 
-        <Route path="testing" element={<Testing />} />
+        {/* <Route path="testing" element={< />} /> */}
 
       </Route>
     </Route>
   )
-);
+)
 

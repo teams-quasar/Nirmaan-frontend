@@ -6,7 +6,7 @@ import ActionButton from "./ActionButton";
 
 function EditSection() {
   return (
-    <section className="flex overflow-hidden flex-col pt-7 pb-11 bg-white max-w-[600px]">
+    <section className="flex overflow-hidden flex-col pt-7 pb-11 bg-white max-w-[600px] shadow-[-5px_0px_20px_rgba(0,0,0,0.25)] ">
       <header className="flex flex-col px-8 pb-2 w-full max-md:px-5 max-md:max-w-full">
         <div className="flex flex-wrap gap-5 justify-between text-lg font-semibold leading-loose text-black max-md:max-w-full">
           <h1>Edit section</h1>
@@ -29,11 +29,20 @@ function EditSection() {
       <main className="flex flex-col px-8 mt-3 w-full text-sm leading-none max-md:px-5 max-md:max-w-full">
         <MarkingScheme />
         <InputField label="Total Questions :" value="25" />
-        <div className="flex gap-5 self-center mt-7 max-w-full font-medium leading-6 text-white w-[323px]">
+        <div className="flex gap-5 self-center  mt-7 w-full font-medium leading-6 text-white">
           <ActionButton type="delete" text="Delete section" />
           <ActionButton type="save" text="Save changes" />
         </div>
       </main>
+      <main className="flex flex-col px-8 mt-3 w-full text-sm leading-none max-md:px-5 max-md:max-w-full">
+  <MarkingScheme />
+  <InputField label="Total Questions :" value="25" />
+  <div className="flex justify-center gap-5 mt-7 w-full font-medium leading-6 text-white">
+    <ActionButton type="delete" text="Delete section" />
+    <ActionButton type="save" text="Save changes" />
+  </div>
+</main>
+
     </section>
   );
 }

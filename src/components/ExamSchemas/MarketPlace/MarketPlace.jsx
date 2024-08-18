@@ -7,7 +7,7 @@ import InputField from "./InputField";
 import ActionButtons from "./ActionButtons";
 import Statistics from "./Statistics";
 
-function ExamSchema() {
+function MarketPlace() {
   return (
     <main className="flex flex-col rounded-none max-w-[600px] shadow-[-5px_0px_20px_rgba(0,0,0,0.25)]">
       <div className="flex flex-col pt-8 pb-14 w-full bg-white max-md:max-w-full">
@@ -55,4 +55,4 @@ function ExamSchema() {
   );
 }
 
-export default ExamSchema;
+export default MarketPlace;

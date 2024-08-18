@@ -3,7 +3,7 @@ import React from "react";
 
 function ExamName() {
   return (
-    <div className="flex flex-col w-full text-sm max-md:mr-1.5 max-md:max-w-full">
+    <div className="mt-4 flex flex-col w-full text-sm max-md:mr-1.5 max-md:max-w-full">
       <label
         htmlFor="examName"
         className="font-medium leading-none text-slate-900"
