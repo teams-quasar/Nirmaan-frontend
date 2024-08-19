@@ -30,6 +30,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { DataTablePagination } from "./pagination"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -149,22 +150,23 @@ interface DataTableProps<TData, TValue> {
       </Table>
     </div>
     <div className="flex items-center justify-end space-x-2 py-4">
-        <Button
+        {/* <Button
           variant="outline"
           size="sm"
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
         >
           Previous
-        </Button>
-        <Button
+        </Button> */}
+        <DataTablePagination table ={table} />
+        {/* <Button
           variant="outline"
           size="sm"
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
         >
           Next
-        </Button>
+        </Button> */}
       </div>
     </div>
   )

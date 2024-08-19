@@ -3,6 +3,8 @@
 import { ColumnDef } from "@tanstack/react-table"
 import { ArrowUpDown } from "lucide-react"
 import { MoreHorizontal } from "lucide-react"
+import DataTableColumnHeader from "./column-header"
+
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -51,41 +53,54 @@ export const columns: ColumnDef<Payment>[] =
 [
 {
   accessorKey: "status",
-  header: () => <div className="text-left">Status</div>,
+  // header: () => <div className="text-left">Status</div>,
+  header: ({ column }) => (
+    <DataTableColumnHeader column={column} title="status" />
+  ),
+
   cell: ({ row }) => {
     const status = row.getValue("status") as string;
     return <div className="text-left">{status}</div>;
   },
 },
+// {
+//   accessorKey: "email",
+//   header: ({ column }) => {
+//     return (
+//       <Button
+//         variant="ghost"
+//         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+//       >
+//         Email
+//         <ArrowUpDown className="ml-2 h-4 w-4" />
+//       </Button>
+//     )
+//   },
+//   cell: ({ row }) => {
+//     const email = (row.getValue("email") as string);
+    
+//     return <div className="text-left">{email}</div>;
+//   },
+// },
 {
   accessorKey: "email",
-  header: ({ column }) => {
-    return (
-      <Button
-        variant="ghost"
-        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-      >
-        Email
-        <ArrowUpDown className="ml-2 h-4 w-4" />
-      </Button>
-    )
-  },
-  cell: ({ row }) => {
-    const email = (row.getValue("email") as string);
-    
-    return <div className="text-left">{email}</div>;
-  },
+  header: ({ column }) => (
+    <DataTableColumnHeader column={column} title="Email" />
+  ),
 },
 {
   accessorKey: "amount",
-  header: () => <div className="text-right">Amount</div>,
+  // header: () => <div className="text-right">Amount</div>,
+  header: ({ column }) => (
+    <DataTableColumnHeader column={column} title="amount" />
+  ),
   cell: ({ row }) => {
     const amount = parseFloat(row.getValue("amount"));
     const formatted = new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
     }).format(amount);
-    return <div className="text-right font-medium">{formatted}</div>;
+    return <div className=" font-medium">{formatted}</div>;
   },
 },
 {
