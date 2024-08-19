@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Payment, columns } from "./columns";
-import DataTable from "./data-table";
+import DataTable from "./data-ttable";
 
 function getData(): Promise<Payment[]> {
   // Fetch data from your API here.

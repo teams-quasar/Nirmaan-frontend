@@ -15,6 +15,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
+
+
+
+
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
 export type Payment = {
@@ -55,7 +59,10 @@ export const columns: ColumnDef<Payment>[] =
   accessorKey: "status",
   // header: () => <div className="text-left">Status</div>,
   header: ({ column }) => (
+    <div>
     <DataTableColumnHeader column={column} title="status" />
+    
+    </div>
   ),
 
   cell: ({ row }) => {
@@ -63,25 +70,7 @@ export const columns: ColumnDef<Payment>[] =
     return <div className="text-left">{status}</div>;
   },
 },
-// {
-//   accessorKey: "email",
-//   header: ({ column }) => {
-//     return (
-//       <Button
-//         variant="ghost"
-//         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-//       >
-//         Email
-//         <ArrowUpDown className="ml-2 h-4 w-4" />
-//       </Button>
-//     )
-//   },
-//   cell: ({ row }) => {
-//     const email = (row.getValue("email") as string);
-    
-//     return <div className="text-left">{email}</div>;
-//   },
-// },
+
 {
   accessorKey: "email",
   header: ({ column }) => (
