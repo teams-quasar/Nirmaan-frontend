@@ -37,6 +37,8 @@ import ExamSchemaE from "./components/ExamSchemas/MarketPlace/MarketPlace.jsx";
 import MarketPlace from "./components/ExamSchemas/MarketPlace/MarketPlace.jsx";
 import EditSection from "./components/ExamSchemas/EditSection/EditSection.jsx";
 import AddNewSection from "./components/ExamSchemas/AddNewSection/AddNewSection.jsx";
+import DataTable from "./components/Table/data-table.tsx"
+import DemoPage from "./components/Table/page.tsx"
 
 
 
@@ -90,7 +92,7 @@ export const router = createBrowserRouter(
         <Route path="organisation" element={<Organisation />} />
         <Route path="analytics" element={<Analytics />} />
 
-        {/* <Route path="testing" element={< />} /> */}
+        <Route path="testing" element={<DemoPage />} />
 
       </Route>
     </Route>
