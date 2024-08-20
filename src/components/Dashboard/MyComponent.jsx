@@ -1,15 +1,14 @@
 
 import React from "react";
 
-import Sidebar from "./Sidebar";
-import MainContent from "./MainContent";
+
+import DemoPage from "../Table/page"
 
 function MyComponent() {
   return (
     <div className="pr-8 bg-white max-md:pr-5 dark:bg-black dark:text-white">
       <div className="flex gap-5 max-md:flex-col max-md:gap-0 dark:bg-black dark:text-white">
-       <Sidebar />
-        <MainContent />
+       <DemoPage />
       </div>
     </div>
   );
