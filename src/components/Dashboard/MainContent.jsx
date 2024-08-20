@@ -2,6 +2,7 @@
 import React from "react";
 // import ExamList from "./ExamList";
 import DemoPage from "../Table/page";
+import TestTable from "./test-page"
 
 function MainContent() {
   return (
@@ -48,7 +49,7 @@ function MainContent() {
           </button>
         </div>
         <ExamList /> */}
-        <DemoPage />
+        <TestTable />
       </div>
     </main>
     
