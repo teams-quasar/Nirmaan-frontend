@@ -28,7 +28,7 @@ export default function TestTable() {
 
   return (
     <div className=" py-10">
-      <DataTable columns={columns} data={data} />
+      <DataTable columns={columns} searchcolumn="title" data={data} />
     </div>
   );
 }

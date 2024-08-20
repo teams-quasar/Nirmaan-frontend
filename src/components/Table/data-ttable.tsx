@@ -33,11 +33,13 @@ import DataTablePagination from "./pagination";
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  searchcolumn:string;
 }
 
 function DataTable<TData, TValue>({
   columns,
   data,
+  searchcolumn,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
@@ -49,6 +51,7 @@ function DataTable<TData, TValue>({
   const table = useReactTable({
     data,
     columns,
+    
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     onSortingChange: setSorting,
@@ -71,11 +74,11 @@ function DataTable<TData, TValue>({
     <div>
       <div className="flex items-center py-4 space-x-4 justify-between ">
         <div className="flex gap-4">
-          <Input
-            placeholder="Filter emails..."
-            value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
+          <Input 
+            placeholder={`Filter ${searchcolumn}...`}
+            value={(table.getColumn(searchcolumn)?.getFilterValue() as string) ?? ""}
             onChange={(event) =>
-              table.getColumn("email")?.setFilterValue(event.target.value)
+              table.getColumn(searchcolumn)?.setFilterValue(event.target.value)
             }
             className="max-w-sm border-gray-300 w-80"
           />
