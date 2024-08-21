@@ -73,7 +73,7 @@ function DataTable<TData, TValue>({
   return (
     <div>
       <div className="flex items-center py-4 space-x-4 justify-between ">
-        <div className="hidden">
+        
           <div className="flex gap-4">
             <Input
               placeholder={`Filter ${searchcolumn}...`}
@@ -142,7 +142,7 @@ function DataTable<TData, TValue>({
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-        </div>
+       
       </div>
 
       <div className="rounded-md border">
