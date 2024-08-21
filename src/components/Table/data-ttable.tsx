@@ -33,7 +33,7 @@ import DataTablePagination from "./pagination";
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
-  searchcolumn:string;
+  searchcolumn: string;
 }
 
 function DataTable<TData, TValue>({
@@ -51,7 +51,7 @@ function DataTable<TData, TValue>({
   const table = useReactTable({
     data,
     columns,
-    
+
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     onSortingChange: setSorting,
@@ -73,68 +73,75 @@ function DataTable<TData, TValue>({
   return (
     <div>
       <div className="flex items-center py-4 space-x-4 justify-between ">
-        <div className="flex gap-4">
-          <Input 
-            placeholder={`Filter ${searchcolumn}...`}
-            value={(table.getColumn(searchcolumn)?.getFilterValue() as string) ?? ""}
-            onChange={(event) =>
-              table.getColumn(searchcolumn)?.setFilterValue(event.target.value)
-            }
-            className="max-w-sm border-gray-300 w-80"
-          />
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button className="border-gray-300" variant="outline">
-                Filter{" "}
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-white" align="start">
-              <DropdownMenuItem onClick={() => filterByStatus("pending")}>
-                Pending
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => filterByStatus("processing")}>
-                Processing
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => filterByStatus("success")}>
-                Success
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => filterByStatus("failed")}>
-                Failed
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => filterByStatus("")}>
-                Clear Filter
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-        <div className="flex">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild className="bg-white">
-              <Button
-                variant="outline"
-                className="ml-auto flex gap-2 justify-center px-4 py-2 text-sm font-medium leading-6 text-black whitespace-nowrap bg-white rounded-md border border-gray-300 border-solid "
-              >
-                View
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              {table
-                .getAllColumns()
-                .filter((column) => column.getCanHide())
-                .map((column) => (
-                  <DropdownMenuCheckboxItem
-                    key={column.id}
-                    className="capitalize bg-white "
-                    checked={column.getIsVisible()}
-                    onCheckedChange={(value) =>
-                      column.toggleVisibility(!!value)
-                    }
-                  >
-                    {column.id}
-                  </DropdownMenuCheckboxItem>
-                ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
+        <div className="hidden">
+          <div className="flex gap-4">
+            <Input
+              placeholder={`Filter ${searchcolumn}...`}
+              value={
+                (table.getColumn(searchcolumn)?.getFilterValue() as string) ??
+                ""
+              }
+              onChange={(event) =>
+                table
+                  .getColumn(searchcolumn)
+                  ?.setFilterValue(event.target.value)
+              }
+              className="max-w-sm border-gray-300 w-80"
+            />
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button className="border-gray-300" variant="outline">
+                  Filter{" "}
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white" align="start">
+                <DropdownMenuItem onClick={() => filterByStatus("pending")}>
+                  Pending
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => filterByStatus("processing")}>
+                  Processing
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => filterByStatus("success")}>
+                  Success
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => filterByStatus("failed")}>
+                  Failed
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => filterByStatus("")}>
+                  Clear Filter
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+          <div className="flex">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild className="bg-white">
+                <Button
+                  variant="outline"
+                  className="ml-auto flex gap-2 justify-center px-4 py-2 text-sm font-medium leading-6 text-black whitespace-nowrap bg-white rounded-md border border-gray-300 border-solid "
+                >
+                  View
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                {table
+                  .getAllColumns()
+                  .filter((column) => column.getCanHide())
+                  .map((column) => (
+                    <DropdownMenuCheckboxItem
+                      key={column.id}
+                      className="capitalize bg-white "
+                      checked={column.getIsVisible()}
+                      onCheckedChange={(value) =>
+                        column.toggleVisibility(!!value)
+                      }
+                    >
+                      {column.id}
+                    </DropdownMenuCheckboxItem>
+                  ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
         </div>
       </div>
 
