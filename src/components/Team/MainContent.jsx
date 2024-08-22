@@ -1,15 +1,15 @@
 import React from "react";
-import ExamList from "./ExamList";
-import ExamSchemaTable from "./ExamSchemasTable/es-table"
+import TeamMembersTable from "./TeamTable/t-table"
+
 
 function MainContent() {
   return (
     <div className="flex flex-col mt-14 max-md:mt-10 max-md:max-w-full">
       <h1 className="text-3xl font-semibold tracking-tight leading-9 text-black max-md:max-w-full dark:text-white">
-        Exam Schema
+        Team members
       </h1>
       <p className="mt-3 text-sm leading-5 text-black max-md:max-w-full dark:text-white">
-        A schema is blueprint from which the exam papers are created.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eaque recusandae ex corrupti doloribus. Eos numquam suscipit doloremque ratione, modi dolor similique porro nihil animi maiores ipsam illum alias beatae.
       </p>
       <div className="flex gap-5 justify-between mt-10 w-full max-md:flex-wrap max-md:max-w-full">
         {/* <div className="flex gap-5 max-md:flex-wrap max-md:max-w-full">
@@ -50,10 +50,10 @@ function MainContent() {
             alt=""
             className="shrink-0 my-auto w-4 aspect-square"
           />
-          <span>New Exam Schema</span>
+          <span>Add Questions</span>
         </button>
       </div>
-      <ExamSchemaTable />
+      <TeamMembersTable />
     </div>
   );
 }

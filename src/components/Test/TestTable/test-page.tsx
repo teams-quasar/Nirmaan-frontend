@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Test, columns } from "./test-columns";
-import DataTable from "../Table/data-ttable";
+import DataTable from "../../Table/data-ttable";
 
 function getData(): Promise<Test[]> {
   return Promise.resolve([
@@ -44,9 +44,10 @@ function getData(): Promise<Test[]> {
       attempts: 1,
       status: "pending",
     },
-  ])
-  return fetch('http://localhost:5000/api/tests')
-    .then(response => response.json());
+  ]);
+  return fetch("http://localhost:5000/api/tests").then((response) =>
+    response.json()
+  );
 }
 
 export default function TestTable() {

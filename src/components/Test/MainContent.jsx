@@ -2,7 +2,7 @@
 import React from "react";
 // import ExamList from "./ExamList";
 import DemoPage from "../Table/page";
-import TestTable from "./test-page"
+import TestTable from "./TestTable/test-page"
 
 function MainContent() {
   return (

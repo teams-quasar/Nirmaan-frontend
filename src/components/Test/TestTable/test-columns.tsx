@@ -3,7 +3,7 @@
 import { ColumnDef } from "@tanstack/react-table"
 import { ArrowUpDown } from "lucide-react"
 import { MoreHorizontal } from "lucide-react"
-import DataTableColumnHeader from "../Table/column-header"
+import DataTableColumnHeader from "../../Table/column-header"
 
 import { Button } from "@/components/ui/button"
 import {

@@ -7,9 +7,9 @@ import {
 } from "react-router-dom";
 
 // import Layout from "./components/Dashboard/Layout.jsx";
-import Layout from "./components/Dashboard/Layout.jsx";
+import Layout from "./components/Test/Layout.jsx";
 import BlogList from "./components/Blogss/BlogList.jsx";
-import MainContent from "./components/Dashboard/MainContent.jsx";
+import MainContent from "./components/Test/MainContent.jsx";
 import SignUpPage from "./components/SignUp/SignUpPage/SignUpPage.jsx";
 // import PrivateRoutes from "./utils/PrivateRoutes.jsx";
 import LoginPage from "./components/Login/LoginPage.jsx";
