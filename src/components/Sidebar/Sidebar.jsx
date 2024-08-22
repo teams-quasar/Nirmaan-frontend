@@ -8,6 +8,7 @@ import ThemeSwitcher from '../../features/theme/themeSwitcher';
 import { useDispatch } from "react-redux"
 import authService from "../../appwrite/auth"
 import { logout } from "../../store/authSlice"
+import NirmanButton from "../NirmanButton/NirmanButton";
 
 function SLogoutBtn() {
     const dispatch = useDispatch()
@@ -41,6 +42,46 @@ const sidebarItems = [
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
     text: "Blogs",
     to: '/quiz/blogs'
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Blogs Cord..",
+    to: '/quiz/blogscord'
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Question Pool",
+    to: '/quiz/question_pool'
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Exam Schemas",
+    to: '/quiz/exam_schema'
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Analytics",
+    to: '/quiz/analytics'
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Team",
+    to: '/quiz/team'
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Students",
+    to: '/quiz/students'
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Organisation",
+    to: '/quiz/organisation'
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d98357a71e2ad3092798be3422551f3981de837b313b8f8ec2e6b40cbc3a19bd?apiKey=8a82faa9db93454483a68c973b38c7b0&",
+    text: "Testing Components",
+    to: '/quiz/testing'
   },
 ];
 
@@ -101,14 +142,7 @@ function Sidebar() {
       <div className="flex flex-col justify-center max-md:mt-8">
         <nav className="flex flex-col px-2.5 pt-6 pb-3.5 bg-white border-r border-gray-300 border-solid dark:bg-black  ">
           <div className="flex gap-5 justify-between ml-2.5 ">
-            <div className="flex gap-1.5 justify-center self-start text-lg font-semibold leading-7 text-black whitespace-nowrap dark:bg-black dark:text-white">
-              <img          loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/f81070173ad6bb2f144fbe6557b07afa4c0787e9cd624e7adfe162f9d149a7dc?apiKey=8a82faa9db93454483a68c973b38c7b0&"
-                alt=""
-                className="shrink-0 aspect-square w-[30px]"
-              />
-              <div className="my-auto">Nirmaan</div>
-            </div>
+            <NirmanButton />
             <button className="flex justify-center items-center px-2 w-8 h-8 bg-white rounded-md border border-gray-300 border-solid dark:bg-black dark:text-white">
               <img
                 loading="lazy"
@@ -131,6 +165,9 @@ function Sidebar() {
           ))}
 
           <hr className="shrink-0 h-px bg-gray-300 border border-gray-300 border-solid mt-[673px] max-md:mt-10" />
+          
+          
+          
           <div className="flex gap-5 justify-between mt-3.5 w-full">
             <div className="flex gap-2.5 self-start text-sm font-medium leading-6 text-black">
               <img
@@ -160,12 +197,5 @@ function Sidebar() {
 
 export default Sidebar;
 
-{/* <hr className="shrink-0 mt-6 h-px bg-gray-300 border border-gray-300 border-solid" />
-          {sidebarItems.map((item, index) => (
-            <SidebarItem
-              key={index}
-              icon={item.icon}
-              text={item.text}
-              active={item.active}
-            /> 
-            ))}*/}
+
+            

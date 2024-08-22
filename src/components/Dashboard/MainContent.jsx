@@ -1,11 +1,13 @@
 
 import React from "react";
-import ExamList from "./ExamList";
+// import ExamList from "./ExamList";
+import DemoPage from "../Table/page";
+import TestTable from "./test-page"
 
 function MainContent() {
   return (
    
-    <main className="flex flex-col ml-5 w-[79%] max-md:ml-0 max-md:w-full">
+    <main className="flex flex-col ml-5 max-md:ml-0 max-md:w-full">
       <div className="flex flex-col mt-14 max-md:mt-10 max-md:max-w-full">
         <h1 className="text-3xl font-semibold tracking-tight leading-9 text-black max-md:max-w-full dark:text-white">
           Your mock exams
@@ -13,7 +15,7 @@ function MainContent() {
         <p className="mt-3 text-sm leading-5 text-black max-md:max-w-full dark:text-white">
           Here is a list of all mock tests already purchased by you.
         </p>
-        <div className="flex gap-5 justify-between mt-10 w-full max-md:flex-wrap max-md:max-w-full">
+        {/* <div className="flex gap-5 justify-between mt-10 w-full max-md:flex-wrap max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-wrap max-md:max-w-full">
             <div className="flex flex-col grow shrink-0 justify-center text-base leading-6 text-gray-500 basis-0 w-fit">
               <div className="flex flex-col justify-center">
@@ -46,7 +48,8 @@ function MainContent() {
             <span>View</span>
           </button>
         </div>
-        <ExamList />
+        <ExamList /> */}
+        <TestTable />
       </div>
     </main>
     

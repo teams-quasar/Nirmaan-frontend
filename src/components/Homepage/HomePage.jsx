@@ -12,14 +12,12 @@ function HomePage() {
       <Navigation />
       <AuthButtons />
     </header>
-    <div className="text-center">for other webpages
+
+    <div className="text-center"><p>for other webpages</p>
     
-    <p>create account by signup </p>
-    <p>then</p>
-    <p>localhostxxxx/quiz/blogs</p>
-    <p>localhostxxxx/quiz/test</p>
-    <p>localhostxxxx/quiz/discover</p>
-    <p>localhostxxxx/quiz/wallet</p>
+    <p>click on my test to directly login </p>
+    
+
     </div>
     
     </>
