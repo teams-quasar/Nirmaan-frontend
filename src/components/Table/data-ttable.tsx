@@ -150,7 +150,8 @@ function DataTable<TData, TValue>({
                 <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
-                  onClick={() => handleRowClick(row.original)} // Handle row click
+                  onClick={() => handleRowClick(row.original)}
+                  className=" hover:cursor-pointer" // Handle row click
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>

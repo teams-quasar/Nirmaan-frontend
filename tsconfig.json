@@ -1,5 +1,4 @@
 {
- 
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
@@ -12,8 +11,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "allowJs": true // <-- Add this line
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "src/store/authSlice.js"]
 }

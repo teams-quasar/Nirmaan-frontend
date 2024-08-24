@@ -9,7 +9,7 @@ import {
 // import Layout from "./components/Dashboard/Layout.jsx";
 import Layout from "./components/Test/Layout.jsx";
 import BlogList from "./components/Blogss/BlogList.jsx";
-import MainContent from "./components/Test/MainContent.jsx";
+import MainContent from "./components/Test/TestPage.jsx";
 import SignUpPage from "./components/SignUp/SignUpPage/SignUpPage.jsx";
 // import PrivateRoutes from "./utils/PrivateRoutes.jsx";
 import LoginPage from "./components/Login/LoginPage.jsx";
@@ -19,11 +19,11 @@ import HomePage from "./components/Homepage/HomePage.jsx";
 
 import BlogListCo from "./components/BlogCord/BlogCordPage/BlogList.jsx";
 
-import QuestionPool from "./components/QuestionPool/QuestionPool.jsx";
+import QuestionPool from "./components/QuestionPool/QuestionPoolPage.jsx";
 import AuthLayout from "./utils/AuthLayout.jsx";
 import App from "./App.jsx";
 
-import TestComponent from "./components/TestComponent/TestComponent.jsx";
+import TestComponent from "./components/Test/TestComponent/TestComponent.jsx";
 import ExamSchemas from "./components/ExamSchemas/ExamSchemas.jsx";
 import Team from "./components/Team/Team.jsx";
 import Students from "./components/Students/Students.jsx";

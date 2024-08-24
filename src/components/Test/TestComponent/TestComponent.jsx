@@ -11,7 +11,7 @@ import TestAnswerKey from "./TestAnswerKey";
 
 function TestComponent() {
   return (
-    <main className="flex flex-col pt-8 pb-20 bg-white border-l border-gray-300 shadow-lg max-w-[600px]">
+    <main className="flex flex-col rounded shadow-[0px_0px_20px_rgba(0,0,0,0.1)] pt-8 pb-20 bg-white border-l   max-w-[38rem]">
       <TestHeader />
       <TestStats />
       <TestAttempt />
