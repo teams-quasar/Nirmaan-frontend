@@ -6,7 +6,7 @@ import TestHeader from "./TestHeader";
 import TestStats from "./TestStats";
 import TestAttempt from "./TestAttempt";
 import TestSections from "./TestSections";
-import TestResults from "./TestResults";
+import TestResults from "./TestResults.tsx";
 import TestAnswerKey from "./TestAnswerKey";
 
 function TestComponent(props) {
