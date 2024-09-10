@@ -41,7 +41,7 @@ interface DataTableProps<TData, TValue> {
 function DataTable<TData, TValue>({
   columns,
   data,
-  searchcolumn,
+  searchcolumn, 
   ModalComponent,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);

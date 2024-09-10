@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Test, columns } from "./test-columns";
 import DataTable from "../../Table/data-ttable";
+import ExamModal2 from "./test2-modal"; // Import your modal component
 import ExamModal from "./test-modal"; // Import your modal component
 
 // function getData(): Promise<Test[]> {
@@ -102,7 +103,7 @@ function getData(): Promise<Test[]> {
       status: "success",
       total_questions: 40,
       maximum_marks: 60,
-      attempts_remaining: 1,
+      attempts_remaining: 2,
       max_attempts: 4,
       sections: [
         { title: "Introduction", questions: 3, maximum_marks: 10 },
@@ -149,7 +150,7 @@ function getData(): Promise<Test[]> {
         { title: "Basics of SQL", questions: 5, maximum_marks: 40 },
         { title: "Joins and Subqueries", questions: 5, maximum_marks: 40 },
       ],
-      results: [],
+      results: [ { previous_attempts: "Attempt 1", attempted_on: "22 Apr 2017", marks_obtained: 30 }],
     },
   ]);
   //   return fetch("http://localhost:5000/api/tests").then((response) =>

@@ -59,13 +59,13 @@
 
 import React from "react";
 
-function TestSections() {
-  const sections = [
-    { name: "Sample section 1", questions: 30, marks: 150 },
-    { name: "Sample section 2", questions: 40, marks: 80 },
-    { name: "Sample section 3", questions: 20, marks: 20 },
-    { name: "Sample section 4", questions: 20, marks: 20 },
-  ];
+function TestSections({data}) {
+  // const sections = [
+  //   { name: "Sample section 1", questions: 30, marks: 150 },
+  //   { name: "Sample section 2", questions: 40, marks: 80 },
+  //   { name: "Sample section 3", questions: 20, marks: 20 },
+  //   { name: "Sample section 4", questions: 20, marks: 20 },
+  // ];
 
   return (
     <section className="self-center mt-8 w-full max-w-[544px] max-md:max-w-full">
@@ -79,11 +79,11 @@ function TestSections() {
             </tr>
           </thead>
           <tbody>
-            {sections.map((section, index) => (
+            {data.sections.map((section, index) => (
               <tr key={index} className="">
-                <td className="px-4 py-2 ">{section.name}</td>
+                <td className="px-4 py-2 ">{section.title}</td>
                 <td className="px-4 py-2 ">{section.questions}</td>
-                <td className="px-4 py-2 ">{section.marks}</td>
+                <td className="px-4 py-2 ">{section.maximum_marks}</td>
               </tr>
             ))}
           </tbody>

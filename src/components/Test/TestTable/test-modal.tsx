@@ -5,12 +5,12 @@ interface TestModalProps {
   isOpen: boolean;
   onClose: () => void;
   data: any; // Define a proper type based on your data
-}
+} 
 
 const ExamModal: React.FC<TestModalProps> = ({ isOpen, onClose, data }) => {
   if (!isOpen) return null;
 
-  return (
+  return (  
     <>
       <div className=" absolute inset-y-0 right-0 w-full max-w-xl overflow-auto z-50">
         <div className=" " onClick={onClose}></div>
@@ -21,9 +21,9 @@ const ExamModal: React.FC<TestModalProps> = ({ isOpen, onClose, data }) => {
               onClick={onClose}
               className="mt-4 px-4 py-2 bg-blue-700 text-white rounded"
             >
-              Closeee
+              Closeee 
             </button>
-            <TestComponent />
+            <TestComponent data ={data}/>
           </div>
        
       </div>

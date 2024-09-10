@@ -9,18 +9,19 @@ import TestSections from "./TestSections";
 import TestResults from "./TestResults";
 import TestAnswerKey from "./TestAnswerKey";
 
-function TestComponent() {
+function TestComponent(props) {
   return (
     <main className=" px-4 flex flex-col rounded shadow-[0px_0px_20px_rgba(0,0,0,0.1)] pt-8 pb-20 bg-white border-l   max-w-[38rem]">
-      <TestHeader />
-      <TestStats />
-      <TestAttempt />
+      
+      <TestHeader data = {props.data} />
+      <TestStats data = {props.data} />
+      <TestAttempt data = {props.data} />
       <hr className="mt-12 w-full bg-gray-300 border border-gray-300 border-solid min-h-[1px] max-md:mt-10 max-md:max-w-full" />
-      <TestSections />
+      <TestSections data = {props.data} />
       <hr className="mt-8 w-full bg-gray-300 border border-gray-300 border-solid min-h-[1px] max-md:max-w-full" />
-      <TestResults />
+      <TestResults data = {props.data} />
       <hr className="mt-10 w-full bg-gray-300 border border-gray-300 border-solid min-h-[1px] max-md:max-w-full" />
-      <TestAnswerKey />
+      <TestAnswerKey data = {props.data} />
     </main>
   );
 }

@@ -1,7 +1,7 @@
 
 
 
-function TestHeader() {
+function TestHeader({data}) {
   return (
     <header className="flex flex-col  w-full max-md:px-5 max-md:max-w-full">
       <div className="flex gap-5 justify-between w-full text-sm font-medium leading-4 text-blue-800 whitespace-nowrap max-md:flex-wrap max-md:max-w-full">
@@ -12,7 +12,7 @@ function TestHeader() {
             className="shrink-0 w-3.5 aspect-square"
             alt=""
           />
-          <div>Attempted</div>
+          <div>Attempted  </div>
         </div>
         <img
           loading="lazy"
@@ -22,7 +22,7 @@ function TestHeader() {
         />
       </div>
       <h1 className="mt-4 text-2xl font-semibold tracking-normal leading-8 text-black max-md:max-w-full">
-        The medium length test title - 20
+      {data.title}
       </h1>
     </header>
   );
