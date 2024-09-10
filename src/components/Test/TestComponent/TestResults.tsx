@@ -18,15 +18,19 @@ import {
 import { ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const data = [
-  { number: 1, date: "12 Jan, 06:45 PM", marks: 136 },
-  { number: 2, date: "15 Jan, 11:30 PM", marks: 192 },
-  { number: 3, date: "20 Jan, 02:05 PM", marks: 238 },
-];
+type TestResult = {
+  previous_attempts: string;
+  attempted_on: string;
+  marks_obtained: number;
+};
 
-const columns: ColumnDef<typeof data[0]>[] = [
+type TestResultsProps = {
+  results: TestResult[];
+};
+
+const columns: ColumnDef<TestResult>[] = [
   {
-    accessorKey: "number",
+    accessorKey: "previous_attempts",
     header: ({ column }) => {
       return (
         <Button
@@ -34,15 +38,14 @@ const columns: ColumnDef<typeof data[0]>[] = [
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           className="hover:bg-transparent px-0 font-bold"
         >
-          Previous Attempt
+          Attempt Number
           <ArrowUpDown className="ml-2 h-4 w-3" />
         </Button>
       )
     },
-    cell: ({ row }) => <div>Attempt {row.getValue("number")}</div>,
   },
   {
-    accessorKey: "date",
+    accessorKey: "attempted_on",
     header: ({ column }) => {
       return (
         <Button
@@ -57,7 +60,7 @@ const columns: ColumnDef<typeof data[0]>[] = [
     },
   },
   {
-    accessorKey: "marks",
+    accessorKey: "marks_obtained",
     header: ({ column }) => {
       return (
         <Button
@@ -73,11 +76,11 @@ const columns: ColumnDef<typeof data[0]>[] = [
   },
 ];
 
-function TestResults() {
+function TestResults({ results }: TestResultsProps) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
 
   const table = useReactTable({
-    data,
+    data: results,
     columns,
     getCoreRowModel: getCoreRowModel(),
     onSortingChange: setSorting,

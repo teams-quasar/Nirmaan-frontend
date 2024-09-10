@@ -19,7 +19,7 @@ function TestComponent(props) {
       <hr className="mt-12 w-full bg-gray-300 border border-gray-300 border-solid min-h-[1px] max-md:mt-10 max-md:max-w-full" />
       <TestSections data = {props.data} />
       <hr className="mt-8 w-full bg-gray-300 border border-gray-300 border-solid min-h-[1px] max-md:max-w-full" />
-      <TestResults data = {props.data} />
+      <TestResults results = {props.data.results} />
       <hr className="mt-10 w-full bg-gray-300 border border-gray-300 border-solid min-h-[1px] max-md:max-w-full" />
       <TestAnswerKey data = {props.data} />
     </main>
