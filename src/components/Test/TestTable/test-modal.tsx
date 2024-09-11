@@ -16,14 +16,7 @@ const ExamModal: React.FC<TestModalProps> = ({ isOpen, onClose, data }) => {
         <div className=" " onClick={onClose}></div>
         
           <div className="">
-           
-            <button
-              onClick={onClose}
-              className="mt-4 px-4 py-2 bg-blue-700 text-white rounded"
-            >
-              Closeee 
-            </button>
-            <TestComponent data ={data}/>
+            <TestComponent data ={data} close = {onClose} />
           </div>
        
       </div>
@@ -32,5 +25,3 @@ const ExamModal: React.FC<TestModalProps> = ({ isOpen, onClose, data }) => {
 };
 
 export default ExamModal;
- {/* <h2 className="text-xl font-semibold mb-4">Exam Details</h2>
-          <pre>{JSON.stringify(data, null, 2)}</pre> */}

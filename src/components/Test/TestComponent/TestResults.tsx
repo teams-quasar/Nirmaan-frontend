@@ -92,6 +92,15 @@ function TestResults({ results }: TestResultsProps) {
 
   return (
     <div className="w-full max-w-[500px] mt-8">
+      <h2 className="flex gap-1.5 text-lg font-semibold leading-7 text-black">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/90212d808b437940516353040aa12abbea5040d33e4b78dd9acc4f9e84f7fb93?apiKey=8a82faa9db93454483a68c973b38c7b0&&apiKey=8a82faa9db93454483a68c973b38c7b0"
+          className="shrink-0  aspect-square w-[18px]"
+          alt=""
+        />
+        <span className="flex-auto">Results</span>
+      </h2>
       <Table>
         <TableHeader className="">
           {table.getHeaderGroups().map((headerGroup) => (
