@@ -7,6 +7,8 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "outDir": "./dist",
+   
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
@@ -15,5 +17,5 @@
     "allowJs": true // <-- Add this line
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "src/store/authSlice.js"]
+  "exclude": ["node_modules", "src/store/authSlice.js" ,  "src/**/*.js","src/store/.js"]
 }
