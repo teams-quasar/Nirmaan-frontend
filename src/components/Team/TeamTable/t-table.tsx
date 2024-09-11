@@ -1,47 +1,32 @@
 import { useEffect, useState } from "react";
-import { Test, columns } from "./test-columns";
-import DataTable from "../Table/data-ttable";
+import { TeamMembers, columns } from "./t-columns";
+import DataTable from "../../Table/data-ttable";
 
-function getData(): Promise<Test[]> {
+function getData(): Promise<TeamMembers[]> {
   return Promise.resolve([
     {
       id: "456def",
-      title: "React Fundamentals",
-      questioncount: 15,
-      duration: 45,
-      attempts: 3,
+      name : "Prajjwal ",
       status: "pending",
     },
     {
       id: "789ghi",
-      title: "Advanced CSS",
-      questioncount: 12,
-      duration: 40,
-      attempts: 2,
+      name : "Parth Yadav",
       status: "pending",
     },
     {
       id: "101jkl",
-      title: "Node.js Overview",
-      questioncount: 8,
-      duration: 25,
-      attempts: 4,
+      name : "Vaibhav",
       status: "success",
     },
     {
       id: "112mno",
-      title: "Python for Beginners",
-      questioncount: 20,
-      duration: 50,
-      attempts: 6,
+      name : "Bhupendra Jogi",
       status: "failed",
     },
     {
       id: "131pqr",
-      title: "SQL Queries",
-      questioncount: 10,
-      duration: 30,
-      attempts: 1,
+      name : "Prashant Kumar",
       status: "pending",
     },
   ])
@@ -49,8 +34,8 @@ function getData(): Promise<Test[]> {
     .then(response => response.json());
 }
 
-export default function TestTable() {
-  const [data, setData] = useState<Test[]>([]);
+export default function TeamMembersTable() {
+  const [data, setData] = useState<TeamMembers[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -69,7 +54,8 @@ export default function TestTable() {
 
   return (
     <div className=" py-10">
-      <DataTable columns={columns} searchcolumn="title" data={data} />
+      <DataTable columns={columns} searchcolumn="name" data={data} />
     </div>
   );
 }
+
