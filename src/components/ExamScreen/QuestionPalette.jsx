@@ -1,10 +1,9 @@
-
 import React from "react";
 
 const QuestionButton = ({ number, bgColor }) => (
   <div className="flex flex-col flex-1 justify-center">
     <div
-      className={`justify-center items-center px-3 w-10 h-10 ${bgColor} rounded-md`}
+      className={`justify-center items-center px-3 w-10 h-10 ${bgColor} rounded-lg`}
     >
       {number.toString().padStart(2, "0")}
     </div>
@@ -58,7 +57,7 @@ const QuestionPalette = () => {
           ))}
         </div>
       ))}
-      <button className="justify-center px-12 py-5 mt-96 text-xl text-white uppercase bg-blue-600 rounded-xl max-md:px-5 max-md:mt-10">
+      <button className="justify-center px-12 py-5 mt-96 text-xl text-white uppercase bg-blue-600 rounded-lg max-md:px-5 max-md:mt-10">
         SUBMIT TEST
       </button>
     </div>

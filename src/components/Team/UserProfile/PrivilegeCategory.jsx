@@ -1,24 +1,42 @@
+"use client";
 
-import React from "react";
+import React, { useState } from "react";
 
-function PrivilegeCategory({ name, permissions }) {
+
+function PrivilegeCategory({
+  name,
+  initialPermissions,
+  allPermissions,
+  onPermissionChange,
+}) {
+  const [permissions, setPermissions] = useState(initialPermissions);
+
+  const togglePermission = (permission) => {
+    const newPermissions = permissions.includes(permission)
+      ? permissions.filter((p) => p !== permission)
+      : [...permissions, permission];
+    setPermissions(newPermissions);
+    onPermissionChange(name, newPermissions);
+  };
+
   return (
-    <>
-      <div className="shrink-0 self-stretch mt-5 h-px bg-gray-300 border border-gray-300 border-solid max-md:max-w-full" />
-      <div className="mt-5 text-base font-medium text-black">{name}</div>
-      <div className="flex gap-2.5 mt-2.5 max-w-full text-sm leading-none text-black whitespace-nowrap w-[341px]">
-        {permissions.map((permission, index) => (
-          <div
+    <div className="mt-5 pb-5 border-b border-gray-300">
+      <div className="text-base font-medium text-black mb-2.5">{name}</div>
+      <div className="flex flex-wrap gap-2.5 text-sm leading-none text-black">
+        {allPermissions.map((permission, index) => (
+          <button
             key={index}
-            className={`gap-1.5 self-stretch px-1.5 ${
-              permission === "Read" ? "bg-green-200" : "bg-red-200"
-            } rounded-md`}
+           
+            onClick={() => togglePermission(permission)}
+            className={`px-2 py-1   rounded-lg ${
+              permissions.includes(permission) ? "bg-green-200" : "bg-red-200"
+            }`}
           >
             {permission}
-          </div>
+          </button>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

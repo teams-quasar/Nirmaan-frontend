@@ -1,7 +1,13 @@
+import React, { useState, useEffect } from "react";
 
-import React from "react";
+function ExamName({ data }) {
+  const [title, setTitle] = useState(data.title);
 
-function ExamName() {
+  // Update the input value when `data.title` changes
+  useEffect(() => {
+    setTitle(data.title);
+  }, [data.title]);
+
   return (
     <div className="mt-4 flex flex-col w-full text-sm max-md:mr-1.5 max-md:max-w-full">
       <label
@@ -15,13 +21,14 @@ function ExamName() {
           <input
             id="examName"
             type="text"
-            className="self-stretch py-2 pr-14 pl-3 w-full bg-white rounded-md border border-solid border-slate-300 max-md:pr-5 max-md:max-w-full"
-            defaultValue="Small Title - 1"
+            className="self-stretch py-2 pr-14 pl-3 w-full bg-white border rounded-lg border-solid border-slate-300 max-md:pr-5 max-md:max-w-full"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)} 
           />
         </div>
       </div>
       <div className="mt-1.5 leading-none text-slate-500">
-        This name will used for SEO purposes as well.
+        This name will be used for SEO purposes as well.
       </div>
     </div>
   );

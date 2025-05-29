@@ -2,9 +2,9 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './src/**/*.{js,ts,jsx,tsx}', // Include JS, TS, JSX, and TSX files
-    './components/**/*.{js,ts,jsx,tsx}', // Add any custom paths introduced by ShadCN
-    './app/**/*.{js,ts,jsx,tsx}', // Add other relevant paths if necessary
+    "./src/**/*.{js,ts,jsx,tsx}", // Add this to include all source files
+    "./components/**/*.{js,ts,jsx,tsx}", // Add any custom paths introduced by ShadCN
+    "./app/**/*.{js,ts,jsx,tsx}", // Add other relevant paths if necessary
   ],
   prefix: "",
   theme: {
@@ -52,7 +52,7 @@ module.exports = {
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
+        lg: "var(--radius, 0.5rem)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
@@ -73,4 +73,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

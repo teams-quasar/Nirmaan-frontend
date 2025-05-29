@@ -1,11 +1,10 @@
-
 import React from "react";
 
 const Calendar = () => {
   const days = Array.from({ length: 60 }, (_, index) => index + 1);
 
   return (
-    <div className="flex flex-col px-5 pt-6 pb-72 mx-auto w-full text-lg font-semibold leading-loose text-black whitespace-nowrap bg-gray-100 max-md:pb-24">
+    <div className=" bg-red-400 flex flex-col px-5 pt-6 pb-72 mx-auto w-full text-lg font-semibold leading-loose text-black whitespace-nowrap max-md:pb-24">
       <div className="flex gap-1 self-start">
         <img
           loading="lazy"
@@ -23,9 +22,9 @@ const Calendar = () => {
               index === 2
                 ? "bg-red-300"
                 : index === 3
-                ? "text-black bg-blue-300 rounded-3xl"
+                ? "text-black bg-blue-800 rounded-3xl"
                 : "bg-white"
-            } rounded-md`}
+            } rounded-lg`}
           >
             {day}
           </div>
